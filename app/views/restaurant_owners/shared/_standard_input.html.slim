@@ -1,0 +1,6 @@
+- input_class = input_class || ""
+.inputs__row
+  .inputs__left-column
+    .inputs__subtitle= input_title
+  .inputs__right-column
+    = f.input input_name, label: false, as: type, input_html: { class: input_class }

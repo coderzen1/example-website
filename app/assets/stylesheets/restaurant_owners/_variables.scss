@@ -1,0 +1,59 @@
+// === susy === //
+$susy: (
+  columns: 12,
+  gutters: 0.25,
+  gutter-position: inside,
+  global-box-sizing: border-box
+);
+
+// === breakpoints === //
+$only-mobile: '(max-width: 767px)';
+$only-tablet: '(min-width: 768px) and (max-width: 991px)';
+$mobile-big: '(min-width: 480px)';
+$tablet: '(min-width: 768px)';
+$desktop: '(min-width: 992px)';
+$large: '(min-width: 1200px)';
+
+// === containers === //
+$content-mobile: 100%;
+$content-big-mobile: 480px;
+$content-tablet: 750px;
+$content-desktop: 970px;
+$content-large: 1170px;
+
+// === fonts === //
+$large-font-size: 48px;
+$big-font-size: 28px;
+$medium-font-size: 18px;
+$smaller-font-size: 16px;
+$tiny-font-size: 14px;
+
+// === colors === //
+$primary-color: #F47B00;
+$light-color: #FFFFFF;
+$dark-color: #000000;
+
+$transparent: transparent;
+$inherit: inherit;
+
+$primary-text-color: #555555;
+$secondary-text-color: #B2B2B2;
+$ternary-text-color: #828282;
+
+$primary-border-color: #D8D8D8;
+$secondary-border-color: #B2B2B2;
+
+$secondary-background-color: #B3B3B3;
+$ternary-background-color: #F6F6F6;
+$fourth-background-color: #B2B2B2;
+
+// === z-index === //
+$z-base: inital;
+$z-modal: 10;
+$z-loader: 20;
+$z-modal-raised: 30;
+$z-notification: 40;
+$z-debug: 1000;
+
+// === other === //
+$header-height: 91px;

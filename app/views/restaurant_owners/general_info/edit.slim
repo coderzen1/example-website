@@ -1,0 +1,6 @@
+= simple_form_for @info, url:  restaurants_general_info_path(id:current_restaurant) , method: :put do |f|
+  = f.input :restaurant_name
+  = f.input :owner_name
+  = f.input :owner_birthday
+  = f.file_field :ownership_document
+  = f.submit "Update"

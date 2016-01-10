@@ -1,0 +1,4 @@
+= simple_form_for @photo, url: restaurants_photos_path do |f|
+   = f.input :caption
+   = f.file_field :image
+   = f.button :submit

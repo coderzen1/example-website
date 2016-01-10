@@ -1,0 +1,33 @@
+// === colors === //
+$color-primary: #FF6E00;
+$color-white: #FFFFFF;
+
+$background-color-footer: #F4F4F4;
+$background-color-grey: #A4A4A4;
+
+$text-color-dark: #565656;
+$text-color-dark-grey: #828282;
+$text-color-grey: #999999;
+
+$button-color-bg-dark: #B3B3B3;
+
+$border-color-light: #D8D8D8;
+
+// === breakpoints === //
+$phones-min: '(min-width: 768px)';
+$tablets-min: '(min-width: 992px)';
+$desktops-min: '(min-width: 1200px)';
+$phones-max: '(max-width: 767px)';
+$tablets-max: '(max-width: 991px)';
+$desktops-max: '(max-width: 1199px)';
+
+
+// mixins
+
+@mixin get-size($number-of-pics) {
+  width: 100%/$number-of-pics;
+}
+
+@mixin get-margin-left($number-of-pics) {
+  margin-left: -100%/($number-of-pics*2);
+}

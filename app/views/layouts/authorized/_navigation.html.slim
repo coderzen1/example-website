@@ -1,0 +1,19 @@
+nav.main-nav
+  = link_to root_path, class: "foodfaves-logo" do
+    = inline_svg('icons/foodfaves_logo_trademark.svg', class: 'main-nav__logo')
+
+  .navbar-mobile.js-navbar-toggle
+    i.i-sandwich-icon.navbar-mobile__icon.__closed
+    i.i-spoon-knife-icon.navbar-mobile__icon.__open
+
+  .main-nav__collapsible-navbar.js-collapsible-navbar
+    ul.nav-list
+      li.nav-item.nav-list__item.nav-item--collapsible
+        = nav_link('My restaurant', restaurants_basic_info_index_path, class: "nav-item__link")
+        .nav-item__border
+      li.nav-item.nav-list__item.nav-item--collapsible
+        = nav_link('Settings', restaurants_settings_path, class: "nav-item__link")
+        .nav-item__border
+      li.nav-item.nav-list__item.nav-item--collapsible
+        = nav_link('Log out', destroy_restaurant_owner_session_path, :method=>"delete", class: "nav-item__link")
+        .nav-item__border

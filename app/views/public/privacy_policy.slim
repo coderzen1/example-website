@@ -1,0 +1,29 @@
+.page-wrapper.js-page data-page-name="policy"
+  .single-section-wrapper.intro-section.nav1
+    = render 'public/header'
+    
+  .single-section-wrapper.privacy-policy
+    .container
+      h1.privacy-policy__main-title = phrase("privacy-policy-page-title")
+      
+      .content-list
+        #accordion.panel-group role="tablist" aria-multiselectable="true"
+          .panel
+            #heading1.panel-heading role="tab"
+              h4.panel-title.content-list__title
+                a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" = phrase("privacy-policy-title-1")
+            #collapseOne.panel-collapse.collapse.in role="tabpanel" aria-labelledby="heading1"
+              .panel-body
+                p = phrase("privacy-policy-1")
+          
+          - 12.times do |i|
+            .panel
+              .panel-heading role="tab" id=("heading"+"#{i+2}")
+                h4.panel-title.content-list__title
+                  a.collapsed role="button" data-toggle="collapse" data-parent="#accordion" href=("#collapse"+"#{i+2}") aria-expanded="false" aria-controls=("collapse"+"#{i+2}")
+                    = phrase("privacy-policy-title-" + "#{(i + 2)}")
+              .panel-collapse.collapse id=("collapse"+"#{i+2}") role="tabpanel" aria-labelledby=("heading"+"#{i+2}")
+                .panel-body
+                  p = phrase("privacy-policy-" + "#{i+2}")
+
+  = render 'public/footer'

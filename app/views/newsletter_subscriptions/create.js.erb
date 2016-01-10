@@ -1,0 +1,12 @@
+<% if @newsletter_subscription.valid? %>
+  alert('Thanks for signing up.  We\'ll be sending great stuff soon!');
+
+<% else %>
+
+  var str = "<%= @newsletter_subscription.errors.full_messages %>";
+  var first = str.indexOf(';') + 1;
+  var last = str.indexOf('&', first);
+  var mes = str.slice(first, last);
+
+  alert(mes);
+<% end %>

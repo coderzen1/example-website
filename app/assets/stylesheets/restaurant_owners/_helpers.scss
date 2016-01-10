@@ -1,0 +1,37 @@
+@import 'restaurant_owners/mixins';
+@import 'restaurant_owners/variables';
+
+$highlight-color: $primary-color;
+
+// Important must be used to override native display
+// scss-lint:disable ImportantRule
+.is-visible-tablet {
+  @include only-mobile {
+    display: none !important;
+  }
+}
+
+.is-visible-only-mobile {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-visible-block {
+  display: block !important;
+}
+// scss-lint:enable ImportantRule
+
+.is-not-scrollable {
+  overflow: hidden;
+}
+
+.is-higlighted-mobile {
+  @include only-mobile {
+    color: $highlight-color;
+  }
+}

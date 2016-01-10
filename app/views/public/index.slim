@@ -1,0 +1,327 @@
+.page-wrapper.js-page data-page-name="main"
+  .single-section-wrapper.intro-section.nav1
+    = render "public/header"
+
+    section.animation
+      .single-centered-animation
+        .container
+          .row
+            .col-xs-12
+              .__animation-wrapper.mobile-hide
+                =inline_svg('intro_animation/mask_1.svg', class: '__svg-animation __active-svg', id: 'mask0')
+                =inline_svg('intro_animation/mask_2.svg', class: '__svg-animation', id: 'mask1')
+                =inline_svg('intro_animation/mask_3.svg', class: '__svg-animation', id: 'mask2')
+                =inline_svg('intro_animation/mask_4.svg', class: '__svg-animation', id: 'mask3')
+              .__animation-wrapper-mobile.mobile-only
+                =image_tag('placeholders/video-image.jpg')
+              h1.__title--highlight =phrase("main", scope: "homepage-titles")
+    .nav-header.mobile-only
+      .col-xs-12
+        .__button-wrapper
+          .button.__button--highlight
+            p.__button-text = t("coming_soon_caps")
+            span.__button-icon
+
+  .single-section-wrapper.food-display-section.nav2
+    .section.food-display
+      .container-fluid.no-padding
+        .row
+          .col-xs-12
+            .picture-gallery-bar
+              - 8.times do |t|
+                .picture-box
+                  .__pic-wrapper.__large-pic-wrapper
+                    .__pic.__large-pic
+                      =image_tag(("foodpics_gallery/gal_img_#{t+1}.png"), :class=>"img-responsive __gallery-pic")
+                    .__pic-title
+                      .__location-pin
+                        =image_tag("icons/ic_location_pin.svg")
+                      p.__title-text Instagram photos
+      .container-fluid.no-padding
+        .row
+          .col-xs-12
+            .picture-gallery-bar.__bottom-bar
+              - 8.times do |t|
+                .picture-box
+                  .__pic-wrapper.__large-pic-wrapper
+                    .__pic.__large-pic
+                      =image_tag(("foodpics_gallery/gal_img_#{t+2}.png"), :class=>"img-responsive __gallery-pic")
+                    .__pic-title
+                      .__location-pin
+                          =image_tag("icons/ic_location_pin.svg")
+                      p.__title-text Your favorites
+
+  .single-section-wrapper.video-section
+    .single-centered-video
+      .container
+        .row
+          .col-xs-12
+            .__title.__title--top =phrase("video", scope: "homepage-titles", inverse: true)
+      .container
+        .row
+          .cox-xs-12
+            .video
+              iframe width="1280" height="720" src="https://www.youtube.com/embed/bHtO3qdxPxk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen
+
+  nav
+    .four-tab-nav role="navigation"
+      .container
+        .row
+          ul.nav
+            li.__tab.active role="presentation"
+              a.__tab-name.nav-3 href="#nav3"
+                = phrase("title-1", scope:"main-nav")
+              .__tab-border
+            li.__tab role="presentation"
+              a.__tab-name.nav-4 href="#nav4"
+                = phrase("title-2", scope:"main-nav")
+              .__tab-border
+            li.__tab role="presentation"
+              a.__tab-name.nav-5  href="#nav5"
+                = phrase("title-3", scope:"main-nav")
+              .__tab-border
+            li.__tab role="presentation"
+              a.__tab-name.nav-6 href="#nav6"
+                = phrase("title-4", scope:"main-nav")
+              .__tab-border
+
+  .single-section-wrapper.crave-or-not-section.crave-or-not-js#nav3
+    section
+      .tutorial-title
+        .container
+          .row
+            .col-xs-12
+              .__title-wrapper
+                .__title-icon
+                  =image_tag('icons/circle_magnifier.svg')
+                h2.__main-title = phrase("section-crave-title", scope: "homepage-titles")
+                .__subtitle = phrase("section-crave-subtitle", scope: "homepage-titles")
+
+      .phone-content
+        .container
+          .row
+            .col-xs-12
+              .col-xs-12.mobile-only
+                .__phone-content-slide-mobile
+                  =image_tag('crave_or_not/card_1.png')
+              .col-xs-3
+                .__content-left
+                  .touch-circle
+                  .__button-choice.__no-button
+              .col-xs-12.col-sm-6
+                .__content-middle.phone
+                  .__phone-wrapper
+                    .__phone-content-wrapper
+                      .__outer-content
+                        .__phone-content-slide-bg.mobile-hide
+                          =image_tag(('crave_or_not/device_background.png'), :class=>"__bg __base-bg __active-bg")
+                          =image_tag(('crave_or_not/green_background.png'), :class=>"__bg __green-bg")
+                          =image_tag(('crave_or_not/red_background.png'), :class=>"__bg __red-bg")
+                        .__phone-content-slide-bg.mobile-only
+                          =image_tag(('crave_or_not/green_background.png'), :class=>"__active-bg")
+                      .__inner-content
+                        .__sliding-content-wrapper.mobile-hide
+                          =image_tag(('crave_or_not/card_1.png'), :class=>"__phone-content-slide __active-slide")
+                          =image_tag(('crave_or_not/card_2.png'), :class=>"__phone-content-slide")
+                          =image_tag(('crave_or_not/card_3.png'), :class=>"__phone-content-slide")
+                        .__sliding-content-wrapper.mobile-only
+                          =image_tag(('crave_or_not/card_1.png'), :class=>"__phone-content-slide--mobile __active-slide __check __mobile")
+                  .__phone-outline
+                    =image_tag(('device_fill.svg'), :class=>"__phone-graphic")
+              .col-xs-3
+                .__content-right
+                  .touch-circle
+                  .__button-choice.__yes-button
+
+  .single-section-wrapper.share-fave-section.share-fave-js#nav4
+    section
+      .tutorial-title
+        .container
+          .row
+            .col-xs-12
+              .__title-wrapper
+                .__title-icon
+                  =image_tag('icons/circle_heart.svg')
+                h2.__main-title = phrase("section-share-title", scope: "homepage-titles")
+                .__subtitle = phrase("section-share-subtitle", scope: "homepage-titles")
+
+      .phone-content
+        .container.__share-fave-desktop-js
+          .row
+            .col-xs-12
+              .col-xs-3
+                .__content-left.__buttons-left
+                  .__button-wrapper
+                    .button.__button--highlight.share-button-js.__selected
+                      .__button-title
+                        p Pie
+                  .__button-wrapper
+                    .button.__button--highlight.share-button-js
+                      .__button-title
+                        p Spring food
+                  .__button-wrapper
+                    .button.__button--highlight.share-button-js
+                      .__button-title
+                        p Veggie
+                  .__button-wrapper
+                    .button.__button--highlight.share-button-js
+                      .__button-title
+                        p Hot
+                  .__button-wrapper
+                    .button.__button--highlight.share-button-js
+                      .__button-title
+                        p Chicken
+              .col-xs-12.col-sm-6
+                .__content-middle.phone
+                  .__phone-wrapper
+                    =image_tag(('device_fill.svg'), :class=>"__phone-graphic")
+                    .__phone-content-wrapper
+                      .__outer-content
+                        .__phone-top-bar
+                          =image_tag('share_and_fave/status_bar_2x.jpg')
+                        .__phone-content
+                          =image_tag(('share_and_fave/iphone_content_medium.jpg'), :id=>"phone-share-content")
+                        .__phone-bottom-bar
+                          =image_tag('share_and_fave/iPhone_tabs_2x.jpg')
+              .col-xs-3
+                .__content-right.__buttons-right
+                  .__button-wrapper
+                    .button.share-button-js
+                      .__button-title.__selected
+                        p Steak
+                  .__button-wrapper
+                    .button.share-button-js
+                      .__button-title
+                        p Raw
+                  .__button-wrapper
+                    .button.share-button-js
+                      .__button-title
+                        p Sweets
+                  .__button-wrapper
+                    .button.share-button-js
+                      .__button-title
+                        p Fish
+                  .__button-wrapper
+                    .button.share-button-js
+                      .__button-title
+                        p Home-made
+
+        .container.mobile-only
+          .row
+            .col-xs-12
+              .__mobile-buttons
+                .__button-mobile
+                  .__button-wrapper
+                        #wok-btm.button.share-button-js.__selected
+                          .__button-title
+                            span =image_tag('icons/plus_icon.svg')
+                            p Pie
+                .__button-mobile
+                  .__button-wrapper
+                        #veggie-btm.button.share-button-js
+                          .__button-title
+                            span =image_tag('icons/plus_icon.svg')
+                            p Spring food
+                .__button-mobile
+                  .__button-wrapper
+                        #cake-btm.button.share-button-js
+                          .__button-title
+                            span =image_tag('icons/plus_icon.svg')
+                            p Veggie
+
+  .single-section-wrapper.explore-places-section.__explore-places-bg#nav5
+    section
+      .tutorial-title
+        .container
+          .row
+            .col-xs-12
+              .__title-wrapper
+                .__title-icon
+                  =image_tag('icons/circle_location.svg')
+                h2.__main-title = phrase("section-explore-title", scope: "homepage-titles")
+                .__subtitle = phrase("section-explore-subtitle", scope: "homepage-titles")
+
+      .phone-content
+        .container
+          .row
+            .col-xs-12
+              .explore-places-locations
+                .col-xs-3
+                  .__content-left.__locations-left
+                    .__location-wrapper
+                      #restaurant-1.__location-icon.__location-icon--lft-top-left
+                      =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-lft-top")
+                    .__location-wrapper
+                      #restaurant-2.__location-icon.__location-icon--lft-middle-right
+                      =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-lft-middle")
+                    .__location-wrapper
+                      #restaurant-3.__location-icon.__location-icon--lft-bottom-left
+                      =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-lft-bottom")
+                .col-xs-12.col-sm-6
+                  .__content-middle.phone
+                    .__phone-wrapper
+                      =image_tag(('device_fill.svg'), :class=>"__phone-graphic")
+                      .__phone-content-wrapper
+                        .__outer-content.__explore-places-slides
+                          - 5.times do |n|
+                            =image_tag(("explore_places/restaurant_#{n+1}.png"), :id=>"restaurant-#{n+1}-pic", :class=>"__phone-content __active")
+                .col-xs-3
+                  .__content-right.__locations-right
+                    .__location-wrapper
+                      #restaurant-4.__location-icon.__location-icon--rt-middle-right
+                      =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-rt-top")
+                    .__location-wrapper
+                      #restaurant-5.__location-icon.__location-icon--rt-bottom-left
+                      =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-rt-bottom")
+
+        .container.explore-places-mobile.mobile-only
+          .row.full-width
+            .col-xs-12.full-width
+              .__locations-mobile.explore-places-locations
+                .__location-wrapper
+                  #restaurant-1-btm.__location-icon.__location-icon-mobile.__location-icon--btm-left
+                  =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-btm-left")
+                .__location-wrapper
+                  #restaurant-2-btm.__location-icon.__location-icon-mobile.__location-icon--btm-right
+                  =image_tag(('explore_places/location_pin_shadow.svg'), :class=>"__location-pin-shadow __shadow-btm-right")
+
+  .single-section-wrapper.spread-the-word-section.__spread-the-word-bg#nav6
+    section
+      .tutorial-title
+        .container
+          .row
+            .col-xs-12
+              .__title-wrapper
+                .__title-icon
+                  =image_tag('icons/circle_spoonfork.svg')
+                h2.__main-title = phrase("section-spread-title", scope: "homepage-titles", inverse: true)
+                .__subtitle = phrase("section-spread-subtitle", scope: "homepage-titles", inverse: true)
+
+      .phone-content
+        .container
+          .row
+            .col-xs-12
+              .col-xs-3
+                .__content-left
+              .col-xs-12.col-sm-6
+                .__content-middle.phone
+                  .__phone-wrapper
+                    =image_tag(('device.svg'), :class=>"__phone-graphic")
+                    .__phone-content-wrapper
+                      .__outer-content
+                        =image_tag(('explore_places/restaurant_2.png'), :class=>"__phone-content")
+              .col-xs-3
+                .__content-right
+
+  .last-section-wrapper
+    .content-wrapper
+      .tutorial-title
+        h2.__main-title = phrase("section-news-title", scope: "homepage-titles")
+        .__button-wrapper
+          .button
+            .__button-text = t("coming_soon_caps")
+            span.__button-icon
+            
+      = render 'public/newsletter_subscription'
+
+  = render "public/footer"

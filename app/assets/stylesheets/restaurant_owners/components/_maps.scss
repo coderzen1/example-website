@@ -1,0 +1,10 @@
+@import 'restaurant_owners/mixins';
+
+.map {
+  width: 100%;
+  height: 300px;
+
+  @include tablet {
+    height: 400px;
+  }
+}

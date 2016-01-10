@@ -1,0 +1,22 @@
+nav.restaurant-nav
+  ul.nav-list.nav-list--secondary
+    li.nav-item.nav-item--secondary.nav-list__item
+      = nav_link('Basic info', restaurants_basic_info_index_path, class: "nav-item__link nav-item__link--secondary")
+      = nav_link('', restaurants_basic_info_index_path, class: "i-basic-info nav-item__link nav-item__link--icon")
+      .nav-item__border
+    li.nav-item.nav-item--secondary.nav-list__item
+      = nav_link('Location', restaurants_location_index_path, class: "nav-item__link nav-item__link--secondary")
+      = nav_link('', restaurants_location_index_path, class: "i-location nav-item__link nav-item__link--icon")
+      .nav-item__border
+    li.nav-item.nav-item--secondary.nav-list__item
+      = nav_link('Menu', restaurants_menu_index_path, class: "nav-item__link nav-item__link--secondary")
+      = nav_link('', restaurants_menu_index_path, class: "i-menu nav-item__link nav-item__link--icon")
+      .nav-item__border
+    li.nav-item.nav-item--secondary.nav-list__item
+      = nav_link('Photos', restaurants_photos_path, class: "nav-item__link nav-item__link--secondary")
+      = nav_link('', restaurants_photos_path, class: "i-photos nav-item__link nav-item__link--icon")
+      .nav-item__border
+    li.nav-item.nav-item--secondary.nav-list__item
+      = nav_link('Tags', restaurants_tags_path, class: "nav-item__link nav-item__link--secondary")
+      = nav_link('', restaurants_tags_path, class: "i-tags nav-item__link nav-item__link--icon")
+      .nav-item__border

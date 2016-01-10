@@ -1,0 +1,8 @@
+= simple_form_for @tag_report, url: restaurants_tag_report_action_path(id:@tag_report.id), remote: true do |f|
+  = f.fields_for :tag_report_actions do |ff|
+    = ff.object.photo.caption
+    = image_tag(ff.object.photo.image, :size => '200x200')
+    = ff.hidden_field :photo_id, value: ff.object.photo.id
+    = ff.input :action, as: :radio_buttons, collection: TagReportAction.actions.keys, label_method: :capitalize
+    = ff.input :tag_suggestion
+  = f.button :submit, "Suggest"

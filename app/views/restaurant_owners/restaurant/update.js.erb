@@ -1,0 +1,6 @@
+<% if @restaurant.invalid?%>
+  $('#contact').html('<%=j render "form" %>')
+<%else%>
+  $('#modal').remove();
+  $('#restaurant').html('<%=j render "restaurant_owners/basic_info/restaurant" %>')
+<%end%>

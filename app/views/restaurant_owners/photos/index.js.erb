@@ -1,0 +1,10 @@
+var photos = $('#photos');
+var more_photos = $('#more-photos');
+
+photos.append('<%=j render @photos%>');
+
+<% if @photos.next_page %>
+  more_photos.attr('href',"<%= restaurants_photos_path(page:@photos.next_page)%>")
+<% else %>
+  more_photos.hide();
+<% end %>

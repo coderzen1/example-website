@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "restaurant": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "photo",
+        "distance",
+        "address"
+      ],
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "photo": { "type": ["string", "null"] },
+        "distance": { "type": "number"},
+        "address": { "type": "string" }
+      }
+    }
+  },
+
+  "type": "object",
+  "required": ["response", "count"],
+  "properties": {
+    "response": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/restaurant" }
+    },
+    "count": { "type": "integer" },
+    "pagination": { "$ref": "pagination_schema.json#/definitions/pagination" }
+  }
+}

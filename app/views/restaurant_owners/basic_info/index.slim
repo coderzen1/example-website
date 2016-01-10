@@ -1,0 +1,12 @@
+section.content.js-main-wrapper
+  - if @restaurant.blank?
+    = render "placeholder"
+  - else
+    = render "main_content"
+
+  / h3 CONTACT INFO
+  / = link_to "Edit",  edit_restaurants_restaurant_path(id: @restaurant.id), class: "btn btn-info", remote: true
+  / #restaurant
+  /   = render "restaurant"
+  / hr
+  / #modal-basic-info

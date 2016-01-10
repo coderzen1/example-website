@@ -1,0 +1,196 @@
+.picture-gallery-bar {
+  overflow: hidden;
+  width: 100%;
+  font-size: 0;
+  white-space: nowrap;
+
+  &.__bottom-bar {
+    overflow: visible;
+
+    @media (min-width: 371px) and (max-width: 740px) {
+      @include get-margin-left(2);
+    }
+
+    @media (min-width: 741px) and (max-width: 1110px){
+      @include get-margin-left(3);
+    }
+
+    @media (min-width: 1111px) and (max-width: 1480px) {
+      @include get-margin-left(4);
+    }
+
+    @media (min-width: 1481px) and (max-width: 1850px) {
+      @include get-margin-left(5);
+    }
+
+    @media (min-width: 1851px) and (max-width: 2220px) {
+      @include get-margin-left(6);
+    }
+
+    @media (min-width: 2221px) and (max-width: 2590) {
+      @include get-margin-left(7);
+    }
+
+    @media (min-width: 2591px) and (max-width: 2960px) {
+      @include get-margin-left(8);
+    }
+
+    @media #{$phones-max} {
+      display: none;
+    }
+  }
+}
+
+.picture-box {
+  display: inline-block;
+  max-width: 370px;
+  max-height: 370px;
+  overflow: hidden;
+  background-size: 100%;
+
+  @media #{$phones-max} {
+    max-height: 370px;
+    max-width: 370px;
+  }
+
+  @media (max-width: 370px) {
+    @include get-size(1);
+    height: 100vw;
+  }
+
+  @media (min-width: 371px) and (max-width: 740px){
+    @include get-size(2);
+    height: 50vw;
+  }
+
+  @media (min-width: 741px) and (max-width: 1110px){
+    @include get-size(3);
+    height: 33.33vw;
+  }
+
+  @media (min-width: 1111px) and (max-width: 1480px) {
+    @include get-size(4);
+    height: 25vw;
+  }
+
+  @media (min-width: 1481px) and (max-width: 1850px) {
+    @include get-size(5);
+    height: 20vw;
+  }
+
+  @media (min-width: 1851px) and (max-width: 2220px) {
+    @include get-size(6);
+    height: 16.666vw;
+  }
+
+  @media (min-width: 2221px) and (max-width: 2590px) {
+    @include get-size(7);
+    height: 14.285vw;
+  }
+
+  @media (min-width: 2591px) and (max-width: 2960px) {
+    @include get-size(8);
+    height: 12.5vw;
+  }
+
+  .__pic-wrapper {
+    position: relative;
+  }
+
+  .__location-pin {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    top: auto;
+    right: auto;
+  }
+
+  .__pic-title {
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    font-family: 'museo_sans_rounded';
+    font-weight: 500;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .__title-text {
+    margin: 0 0 22px 50px;
+  }
+
+  .__large-pic-wrapper {
+    max-width: 370px;
+    max-height: 370px;
+    display: inline-block;
+    width: 100%;
+
+    @media #{$phones-max} {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .__large-pic {
+    width: 100%;
+
+    &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(76,76,76,0);
+    background: linear-gradient(to bottom, rgba(76,76,76,0) 0%, rgba(89,89,89,0) 12%, rgba(102,102,102,0) 25%, rgba(71,71,71,0) 39%, rgba(44,44,44,0) 50%, rgba(0,0,0,0.02) 51%, rgba(17,17,17,0.15) 60%, rgba(43,43,43,0.39) 76%, rgba(28,28,28,0.62) 91%, rgba(18,18,18,0.75) 100%);
+  }
+  }
+
+  .__small-pics-wrapper {
+    display: inline-block;
+    max-width: 185px;
+    max-height: 370px;
+    width: 33.33333%;
+    overflow: hidden;
+
+    @media #{$phones-max} {
+      width: 100%;
+      display: block;
+      max-height: 185px;
+      max-width: 370px;
+    }
+
+    .__pic-wrapper {
+      @media #{$phones-max} {
+        width: 50%;
+        display: inline-block;
+      }
+    }
+  }
+
+  .__small-pic {
+    width: 100%;
+
+    @media #{$phones-min} {
+      height: 50%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(36,36,36,0);
+      background: linear-gradient(to bottom, rgba(36,36,36,0) 26%, rgba(36,36,36,0.75) 100%);
+    }
+  }
+
+  .__gallery-pic {
+    width: 100%;
+    // don't use height or you'll break things!
+  }
+}

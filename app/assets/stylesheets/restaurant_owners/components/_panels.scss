@@ -1,0 +1,26 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+$image-panel-text-color: $light-color;
+
+.image-panel {
+  font-size: $smaller-font-size;
+
+  color: $image-panel-text-color;
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__social {
+    display: inline-block;
+
+    span {
+      margin-left: 10px;
+    }
+
+    &--likes {
+      margin-left: 15px;
+    }
+  }
+}

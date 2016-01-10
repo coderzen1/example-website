@@ -1,0 +1,24 @@
+section.inputs
+  .divider
+  .inputs__wrapper
+    h3.inputs__title.title.title--small.title--lighter Description
+    = f.input :description, label: false, as: :text
+
+section.inputs
+  .divider
+    h3.inputs__title.title.title--small Opening hours
+  .inputs__wrapper
+    = render "restaurant_owners/shared/time_inputs", f: f, time_period: "Monday - Friday", first_input: :weekday_start, second_input: :weekday_end
+    = render "restaurant_owners/shared/time_inputs", f: f, time_period: "Saturday", first_input: :saturday_start, second_input: :saturday_end
+    = render "restaurant_owners/shared/time_inputs", f: f, time_period: "Sunday", first_input: :sunday_start, second_input: :sunday_end
+
+section.inputs
+  .divider
+    h3.inputs__title.title.title--small Contact info
+  .inputs__wrapper
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Address", input_name: :address, type: :string
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "ZIP code / City", input_name: :zip_code, type: :string
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "State", input_name: :state, type: :string
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Phone", input_name: :phone, type: :tel
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "E-mail", input_name: :email, type: :email
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Website", input_name: :website, type: :url

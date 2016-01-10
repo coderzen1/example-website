@@ -1,0 +1,58 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  application_name: "Foodfaves"
+  application_description: "The Foodfaves app lets you find and share the food you crave, anytime, anyplace"
+  hello: "Hello world"
+  get_for_ios: "GET FOR IOS"
+  soon_on_ios: "SOON ON IOS"
+  coming_soon_caps: "COMING SOON"
+  about_nav: "ABOUT"
+  restaurant_owners: "Restaurant owners"
+
+  privacy_policy:
+    title_1: '1 General'
+    title_2: '2 Collection and use of information'
+    title_3: '3 Other use of information'
+    title_4: '4 Sharing of your information'
+    title_5: '5 Social sharing of data'
+    title_6: '6 Use of cookies'
+    title_7: '7 Storage of your information'
+    title_8: '8 Account registration and security'
+    title_9: '9 Your choices about your privacy and information'
+    title_10: '10 Privacy of minors'
+    title_11: '11 Third party websites, applications and interaction'
+    title_12: '12 Conditions of use'
+    title_13: '13 Questions'
+    policy_1: 'text goes here'
+    policy_2: 'text goes here'
+    policy_3: 'text goes here'
+    policy_4: 'text goes here'
+    policy_5: 'text goes here'
+    policy_6: 'text goes here'
+    policy_7: 'text goes here'
+    policy_8: 'text goes here'
+    policy_9: 'text goes here'
+    policy_10: 'text goes here'
+    policy_11: 'text goes here'
+    policy_12: 'text goes here'
+    policy_13: 'text goes here'

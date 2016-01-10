@@ -1,0 +1,29 @@
+section.content.content--lowered-tablet
+  .static-modal
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form'}) do |f|
+      .static-modal__header.modal-header.modal-header--borderless
+        .modal-header__icon-wrapper
+          i.modal-header__icon.modal-header__icon--dark.i-spoon-knife-icon
+        h3.modal-header__title.modal-header__title Restaurant owners log in
+        - if devise_mapping.registerable?
+          = link_to "Register", new_restaurant_owner_registration_path, class: "modal-header__link modal-header__link--uppercase standard-link is-visible-tablet"
+
+      .static-modal__content
+        .divider
+        = devise_error_messages!
+        section.inputs.inputs--high
+          .inputs__wrapper.inputs__wrapper--condensed
+            / - if devise_mapping.recoverable?
+            /   = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "E-mail address", input_name: :email, type: :email
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "Password", input_name: :password, type: :password
+            / - if devise_mapping.rememberable?
+            /   .checkbox style="width:150px"
+            /     .label
+            /       f.check_box :remember_me Remember me
+
+            = f.submit 'Log in', class: 'standard-button standard-button--fullwidth-mobile inputs__round-button inputs__round-button--higher'
+
+  section.disclaimers.is-visible-only-mobile
+    .disclaimer.disclaimer--heavy Don't have an account?
+    = link_to "Register", new_restaurant_owner_registration_path, class: "standard-link disclaimers__link"

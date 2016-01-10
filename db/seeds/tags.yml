@@ -1,0 +1,340 @@
+general_food:
+- Meat
+- Fish
+- Chicken
+- Pasta
+- Dairy
+- Vegetable
+- Fruit
+- Breads
+- Dessert
+- Salads
+- Sandwiches
+- Soups
+- Bubble Tea
+- Burgers
+- Sushi
+- Deli
+- Pizza
+- Wings
+- Steak
+- Candy
+- Baked Goods
+cuisine:
+- African
+- American
+- Argentenian
+- Bagels
+- Bbq
+- Belgian
+- Brazilian
+- Cajun/Creole
+- Cambodian
+- Caribbean
+- Chinese
+- Churrascaria
+- Costa Rican
+- Cuban
+- Dim Sum
+- English
+- Filipino
+- French
+- German
+- Haitian
+- Halal
+- Hawaiian
+- Indian
+- Indonesian
+- Irish
+- Italian
+- Mexican
+- Japanese
+- Juices
+- Josher
+- Latin American
+- Lebanese
+- Malaysian
+- Mediterranean
+- Middle Eastern
+- Moroccan
+- Organic
+- Pakastani
+- Peruvian
+- Polish
+- Portuguese
+- Russian
+- Scandanavian
+- Spanish
+- Sri Lakan
+- Southern And Soul
+- Taiwanese
+- Turkish
+- Vegan
+- Fegetarian
+- Vietnamese
+- Venezuelan
+- Thai
+- European (Western)
+- Korean
+- Fusion
+- Jewish
+meal:
+- Breakfast
+- Brunch
+- Lunch
+- Dinner
+- Snack
+- Desert
+- Late Night
+- Fruits
+- Vegetables
+- Grains
+- Protein
+- Dairy
+description:
+- Cheesy
+- Crunchy
+- Hot
+- Cold
+- Spicy
+- Salty
+- Sweet
+- Sour
+- Bitter
+- Juicy
+- Rich
+- Savory
+- Sugary
+- Sweet And Sour
+breakfast_dishes:
+- Poached Eggs
+- Sunny Side Up Eggs
+- Scrambled Eggs
+- Eggs Benedict
+- Bacon & Eggs
+- Turkey & Eggs
+- Sausage & Eegs
+- Canadian Bacon & Eggs
+- Salami & Eggs
+- Ham & Eggs
+- Ham Steak & Eggs
+- Corned Beef Hash & Eggs
+- Beef Burger Patty & Eggs
+- Pastrami & Eggs
+- Turkey Buger & Eggs
+- Lox & Eggs
+- White Fish & Eggs
+- Veggie Omlette
+- California Omlette
+- Denver Omlette
+- Omelette
+- Egg Whites
+- Egg White Omlette
+- Frittata
+- Egg Sandwich
+fresh_fruit:
+- Apple
+- Apricot
+- Banana
+- Bilberry
+- Blackberry
+- Blackcurrant
+- Blueberry
+- Boysenberry
+- Cantaloupe
+- Currant
+- Cherry
+- Cherimoya
+- Cloudberry
+- Coconut
+- Cranberry
+- Damson
+- Date
+- Dragonfruit
+- Durian
+- Elderberry
+- Feijoa
+- Fig
+- Goji Berry
+- Gooseberry
+- Grape
+- Raisin
+- Grapefruit
+- Guava
+- Huckleberry
+- Honeydew
+- Jackfruit
+- Jambul
+- Jujube
+- Kiwi Fruit
+- Kumquat
+- Lemon
+- Lime
+- Loquat
+- Lychee
+- Mango
+- Marion Berry
+- Melon
+- Watermelon
+- Rock Melon
+- Miracle Fruit
+- Mulberry
+- Nectarine
+- Olive
+- Orange
+- Clementine (Type Of Orange)
+- Mandarine
+- Blood Orange
+- Tangerine
+- Papaya
+- Passionfruit
+- Peach
+- Pear
+- Williams Pear Or Bartlett Pear
+- Persimmon
+- Physalis
+- Plum/Prune (Dried Plum)
+- Pineapple
+- Pomegranate
+- Pomelo
+- Purple Mangosteen
+- Quince
+- Raspberry
+- Western Raspberry Rambutan
+- Redcurrant
+- Salal Berry
+- Salmon Berry
+- Satsuma
+- Star Fruit
+- Strawberry
+- Tamarillo
+- Ugli Fruit
+- Pancakes
+- French Toast
+- Waffles
+- Belgian Waffles
+- Matzo Brei
+- Lox Benedicts
+- Toast
+- Hasho Browns
+- Bagel
+- Roll
+- English Muffin
+- Cinomin Butter Toast
+- Danish
+- Cottage Cheese
+- Peanut Butter & Jelly Sandwich
+- Oatmeal
+soups:
+- Chicken Noodle Soup
+- Matzo Ball Soup
+- Split Pea Soup
+- Mushroom Barley Soup
+- Vegetable Soup
+- Sweet & Sour Cabbage Soup
+- Ramen Bowl
+- Mexican Chicken Tortialla Soup
+- Louisiana Chicken Gumbo
+- Tomato Soup
+- Clam Chowder
+- Cream Of Broccoli Soup
+- Seafood Chowder
+salads:
+- Roasted Beet Salad
+- Roasted Vegetable Salad
+- Ahi Tuna Salad
+- Caesar Salad
+- Chicken Breast Caesar Salad
+- Mexican Chicken Casesar Salad
+- Cobb Salad
+- Bbq Chicken Salad
+- Fried Chicken Salad
+- Balsamic Steak Salad
+- Curry Chicken Salad
+- Chinese Chicken Salad
+- Taco Salad
+- Nicoise Salad
+- Greek Salad
+- California Salad
+- Moraga Salad
+- Strawberry Patch Salad
+- Orchard Salad
+- Italian Salad
+sandwiches:
+- Corned Beef
+- Brisket
+- Pastrami
+- Pastrami Lean
+- Pastramied Turkey
+- Turkey
+- Roast Beef
+- Ham
+- Swiss
+- Salamie
+- Blt
+- Turkey Bacon
+- Chopped Chicken Liver
+- Chicken Salad
+- Tuna Salad
+- Whitefish Salad
+- Egg Salad
+- Vegetarian
+- Reuben
+- Wrap
+- Panini
+- Hot Sandwich
+- Korean Buglgogi
+- Bbq Ribeye Beef Sandwich
+- Philadelphia Cheesesteak
+- Meatball Sandwich
+- Cuban Sandwich
+- Carne Asada Sandwich
+- Fried Fish Sandwich
+- Charboiled Chicken Sandwich
+- Chicken Teriyaki Sandwich
+- Grilled Cheese
+- Patty Melt
+- Turkey Melt
+- Tuna Salad Melt
+- California Melt
+burgers_and_hotdogs:
+- Hamburger
+- Veggue Burger
+- Turkey Burger
+- Cheeseburger
+- Teriyaki Burger
+- Chilli Burger
+- Mediterranean Burger
+- Lamb Burger
+- Salmon Burger
+- Hot Dog
+- Chilli & Onion Dog
+- Corn Dog
+- Ahi Tuna Burger
+- Truffle Burger
+mexican:
+- Quesadilla
+- Chicken Quesadilla
+- Cheese Quesadilla
+- Nachos
+- Enchiladas
+- Tacos
+- Burrito
+- Fajita
+fries:
+- French Fries
+- Curly Fries
+- Waffle Fries
+- Sweet Potatoe Fries
+- Onion Rings
+- Potatoe Salad
+pasta:
+- Spaghetti & Tomato Sauce
+- Spaghetti & Meatballs
+- Penne Creamy Tomato Sauce
+- Penne Alla Vodka
+- Fettuccine Stroganoff
+- Fettucinne Alfrado
+- Fettuccine Chicken Alfrado
+- Gnocchi
+- Taglietelle

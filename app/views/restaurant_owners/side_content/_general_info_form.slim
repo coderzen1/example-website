@@ -1,0 +1,9 @@
+= simple_form_for @info, remote: true do |f|
+  .side_content__header.modal-header.modal-header--borderless
+    .modal-header__icon-wrapper
+      = link_to "", "#", class: "modal-header__icon modal-header__icon--arrow-and-x js-close-side-content"
+    h3.modal-header__title.modal-header__title Edit general info
+    = f.submit "Save", class: "modal-header__link modal-header__link--uppercase standard-link js-submit-modal-form"
+
+  .side-modal__content
+    = render "restaurant_owners/general_info/form_body", f: f

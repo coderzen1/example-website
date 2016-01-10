@@ -1,0 +1,12 @@
+#contact
+  = simple_form_for [:restaurants, @restaurant], remote: request.xhr? do |f|
+    = f.input :email
+    = f.input :phone_number
+    = f.input :website
+    = f.fields_for :address, @restaurant.address do |a|
+      = a.input :address
+      = a.input :zip_code
+      = a.input :city
+      = a.input :state
+      = a.input :country, as: :string
+    = f.submit "Update"

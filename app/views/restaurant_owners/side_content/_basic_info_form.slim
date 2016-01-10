@@ -1,0 +1,10 @@
+// TODO: Adjust form when model is created
+= simple_form_for :basic_info, method: :post, url: restaurants_basic_info_index_path, remote: true do |f|
+  .side_content__header.modal-header.modal-header--borderless
+    .modal-header__icon-wrapper
+      = link_to "", "#", class: "modal-header__icon modal-header__icon--arrow-and-x js-close-side-content"
+    h3.modal-header__title.modal-header__title Add basic info
+    = f.submit "Save", class: "modal-header__link modal-header__link--uppercase standard-link js-submit-modal-form"
+
+  .side-modal__content
+    = render "restaurant_owners/basic_info/form_body", f: f

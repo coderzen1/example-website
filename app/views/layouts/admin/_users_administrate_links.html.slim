@@ -1,0 +1,8 @@
+nav.navbar.navbar-inverse
+  .container
+    .navbar-header
+      ul.nav.navbar-nav
+        li = link_to 'USERS', admin_users_path
+        li = link_to 'FLAGGED USERS', admin_users_path(status: "flagged")
+        li = link_to 'DELETED USERS', admin_users_path(status: "deleted")
+        li = link_to 'LOCKED USERS', admin_users_path(status: "locked")

@@ -1,0 +1,262 @@
+// phone graphic //
+.phone {
+  height: 830px;
+
+  @media #{$phones-max} {
+    height: 490px;
+  }
+
+  .__phone-wrapper {
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .__phone-outline {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 22px;
+    height: 790px;
+    width: 100%;
+    text-align: center;
+
+    @media #{$phones-max} {
+      height: inherit;
+    }
+  }
+
+  .__phone-graphic {
+    margin: 0 auto;
+    height: 790px;
+
+    @media #{$phones-min} and #{$tablets-max} {
+      height: 670px;
+      margin-top: 60px;
+    }
+
+    @media #{$phones-max} {
+      height: 450px;
+    }
+  }
+
+  .__phone-content-wrapper {
+    position: absolute;
+    top: 0;
+    height: 594px;
+    overflow: hidden;
+    margin-top: 117px;
+    right: 0;
+    left: 0;
+
+    @media #{$phones-max} {
+      height: 338px;
+      margin-top: 75px;
+    }
+
+    @media #{$phones-min} and #{$tablets-max} {
+      height: 504px;
+      margin-top: 162px;
+    }
+  }
+
+  .__phone-content {
+    width: 100%;
+  }
+
+  .__outer-content {
+    margin: 0 auto;
+    width: 335px;
+    height: 100%;
+
+    @media #{$phones-max} {
+      width: 190px;
+    }
+
+    @media #{$phones-min} and #{$tablets-max} {
+      width: 284px;
+    }
+  }
+
+  .__inner-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .__phone-content-slide-bg {
+    position: relative;
+    height: 595px;
+
+    @media #{$phones-max} {
+      height: 338px;
+    }
+
+    @media #{$phones-min} and #{$tablets-max} {
+      height: 502px;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+
+      &.__base-bg {
+        transition: opacity 0.75s ease-in-out;
+        opacity: 1;
+      }
+
+      &.__green-bg {
+        transition: opacity 0.75s ease-in-out;
+        opacity: 0;
+      }
+
+      &.__red-bg {
+        transition: opacity 0.75s ease-in-out;
+        opacity: 0;
+      }
+
+      &.__active-bg {
+        opacity: 1;
+      }
+
+      &.__deactivated-bg {
+        opacity: 0;
+      }
+    }
+  }
+
+  .__sliding-content-wrapper {
+    position: relative;
+    height: 100%;
+
+    img {
+      width: 310px;
+      height: 310px;
+      position: absolute;
+      top: 20px;
+      right: auto;
+      bottom: auto;
+      left: 925px;
+
+      @media #{$phones-max} {
+        width: 180px;
+        height: 180px;
+        position: static;
+      }
+
+      @media #{$phones-min} and #{$tablets-max} {
+        width: 260px;
+        height: 260px;
+        left: 530px;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 725px;
+      }
+    }
+  }
+
+  .__phone-content-slide {
+    transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
+    opacity: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    &.__mobile {
+      opacity: 1;
+    }
+
+    &.__active-slide {
+      opacity: 1;
+    }
+  }
+
+  .__phone-slide-right {
+    transform: translate(150%, 0) scale(0.5) rotate(360deg);
+    opacity: 0 !important;
+    border: 3px solid rgb(57, 171, 90);
+    border-radius: 5px;
+  }
+
+  .__phone-slide-left {
+    transform: translate(-150%, 0) scale(0.5) rotate(-360deg);
+    opacity: 0 !important;
+    border: 3px solid rgb(189, 0, 25);
+    border-radius: 5px;
+  }
+
+  .__phone-content-slide--mobile {
+    @extend .__phone-content-slide;
+  }
+}
+
+.__phone-content-slide-mobile {
+  position: absolute;
+  top: 250px;
+  right: -45px;
+  opacity: .5;
+  transform: rotate(25deg);
+  z-index: 10;
+
+  img {
+    width: 110px;
+
+    @media (min-width: 600px) and #{$phones-max} {
+      width: 130px;
+    }
+  }
+
+  @media (min-width: 400px) and (max-width: 450px) {
+    right: -5px;
+  }
+
+  @media (min-width: 451px) and (max-width: 525px) {
+    right: 25px;
+  }
+
+  @media (min-width: 526px) and (max-width: 600px) {
+    right: 45px;
+  }
+
+  @media (min-width: 601px) and (max-width: 675px) {
+    right: 55px;
+  }
+
+  @media (min-width: 676px) and #{$phones-max} {
+    right: 105px;
+  }
+}
+
+// phone slide animation //
+@keyframes slideRight {
+  0% {opacity: 1; }
+  100% {opacity: 0; }
+  from { left: 45%; }
+  to { left: 75%; }
+}
+
+@keyframes slideLeft {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+  from { left: 40%; }
+  to { left: 15%; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

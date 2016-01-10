@@ -1,0 +1,68 @@
+@import 'restaurant_owners/mixins';
+@import 'variables';
+
+$about-text-color: #555555;
+
+$about-images : 'hot', 'restaurants', 'tasty', 'myprofile';
+
+.about {
+  .nav-link--about {
+    color: $primary-color;
+  }
+}
+
+.about-foodfaves {
+  font-family: 'museo_sans_rounded';
+
+  padding: 25px 0 85px;
+
+  .__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+
+    max-width: 555px;
+    margin: 0 auto;
+
+    color: $about-text-color;
+  }
+
+  .__images-wrapper {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 90px;
+  }
+}
+
+.horizontal-images {
+
+  .__image {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @each $image in $about-images {
+      &.__image--#{$image} {
+        @include retina-image('about/#{$image}.png', 240px 426px);
+      }
+    }
+
+    @media #{$tablets-max} {
+      margin: 30px auto 0 auto;
+    }
+
+    &--lowered {
+      @media #{$tablets-min} {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .__image-1,
+  .__image-3 {
+    @include only-mobile {
+      display: none;
+    }
+  }
+}

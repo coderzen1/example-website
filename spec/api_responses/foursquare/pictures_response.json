@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "561bddb6498e00c6298a6d31"
+    },
+    "response": {
+        "photos": {
+            "count": 3,
+            "items": [
+                {
+                    "createdAt": 1423579599,
+                    "height": 712,
+                    "id": "54da19cf498e7cfa1df62a90",
+                    "prefix": "https://irs3.4sqi.net/img/general/",
+                    "source": {
+                        "name": "Swarm for Android",
+                        "url": "https://www.swarmapp.com"
+                    },
+                    "suffix": "/4116637_MWYIVebNrZ0wDIVquF_pd0pCK9AEvwy92RN4ZZEviBI.jpg",
+                    "user": {
+                        "firstName": "Bojan",
+                        "gender": "male",
+                        "id": "4116637",
+                        "lastName": "Cincur",
+                        "photo": {
+                            "prefix": "https://irs2.4sqi.net/img/user/",
+                            "suffix": "/4116637-VF0ZDJP2P3RZWNUS.jpg"
+                        }
+                    },
+                    "visibility": "public",
+                    "width": 960
+                },
+                {
+                    "createdAt": 1414580900,
+                    "height": 1440,
+                    "id": "5450caa4498eb7be99b5a66c",
+                    "prefix": "https://irs0.4sqi.net/img/general/",
+                    "source": {
+                        "name": "Swarm for Android",
+                        "url": "https://www.swarmapp.com"
+                    },
+                    "suffix": "/83566027_Mt-7TwO2qo2sbmogqN6x5Pe6zvDUoO3BQpl4IYFOmcs.jpg",
+                    "user": {
+                        "firstName": "Marko",
+                        "gender": "male",
+                        "id": "83566027",
+                        "photo": {
+                            "prefix": "https://irs1.4sqi.net/img/user/",
+                            "suffix": "/83566027-23W5TGRCQTG02T03.jpg"
+                        }
+                    },
+                    "visibility": "public",
+                    "width": 1080
+                },
+                {
+                    "createdAt": 1409912824,
+                    "height": 960,
+                    "id": "54098ff811d27207655b9377",
+                    "prefix": "https://irs2.4sqi.net/img/general/",
+                    "source": {
+                        "name": "Swarm for Android",
+                        "url": "https://www.swarmapp.com"
+                    },
+                    "suffix": "/83566027_jYYsDQGN4HNI1acljwRFWReD3zcIGFuYhjjGH6K9qLU.jpg",
+                    "user": {
+                        "firstName": "Marko",
+                        "gender": "male",
+                        "id": "83566027",
+                        "photo": {
+                            "prefix": "https://irs1.4sqi.net/img/user/",
+                            "suffix": "/83566027-23W5TGRCQTG02T03.jpg"
+                        }
+                    },
+                    "visibility": "public",
+                    "width": 720
+                }
+            ]
+        }
+    }
+}

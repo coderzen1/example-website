@@ -1,0 +1,82 @@
+.footer {
+  height: 243px;
+  background-color: rgb(244, 244, 244);
+  padding-top: 60px;
+  font-size: 18px;
+  font-family: 'museo_sans_rounded';
+  font-weight: 300;
+  color: $text-color-dark-grey;
+  border-top: 1px solid $border-color-light;
+
+  p {
+    margin: 0 0 4px;
+    line-height: 30px;
+  }
+
+  .__link {
+    color: $color-primary;
+    &:hover {
+      color: lighten($color-primary, 0.5);
+    }
+  }
+
+  .__link--indent-left {
+    margin-left: 40px;
+  }
+
+  .__logo-name {
+    position: relative;
+  }
+
+  .__icon {
+    padding-top: 10px;
+
+    @media #{$phones-max} {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+      position: static;
+    }
+
+    svg {
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  .__left-column-text {
+    padding: 0;
+    margin: 0;
+
+    @media #{$phones-max} {
+      text-align: center;
+    }
+  }
+
+  .__right-column {
+    min-height: 100px;
+    padding-top: 20px;
+
+    @media #{$phones-max} {
+      padding-top: 0;
+    }
+  }
+
+  .__right-column-text {
+    text-align: right;
+
+    @media #{$phones-max} {
+      text-align: center;
+      padding: 0;
+    }
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  .__text-highlight {
+    color: $color-primary;
+  }
+}

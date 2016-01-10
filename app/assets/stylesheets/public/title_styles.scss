@@ -1,0 +1,53 @@
+// base element style //
+// scss-lint:disable PlaceholderInExtend
+.__title {
+  color: $color-white;
+  font-family: 'museo_sans_rounded';
+  font-weight: 100;
+  text-align: center;
+  font-size: 48px;
+}
+
+.__title--highlight {
+  @extend .__title;
+  color: $color-primary;
+}
+
+
+// tutorial title block //
+.tutorial-title {
+  text-align: center;
+
+  &.tutorial-title--after {
+    margin-top: 80px;
+  }
+
+  .__title-wrapper {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .__title-icon {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .__main-title {
+    font-size: 32px;
+    font-family: 'museo_sans_rounded';
+    font-weight: 100;
+    color: $color-primary;
+    margin-bottom: 20px;
+
+    &.__main-title--grey {
+      color: $text-color-dark-grey;
+    }
+  }
+
+  .__subtitle {
+    font-size: 18px;
+    color: $text-color-grey;
+  }
+}

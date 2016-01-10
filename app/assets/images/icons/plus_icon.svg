@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 271</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="01-Home" sketch:type="MSArtboardGroup" transform="translate(-999.000000, -3036.000000)" fill="#FFFFFF">
+            <g id="Rectangle-180-+-Asian-21" sketch:type="MSLayerGroup" transform="translate(997.000000, 3027.000000)">
+                <path d="M9,16 L3.50863659,16 C2.66642015,16 2,16.6715729 2,17.5 C2,18.3342028 2.67543961,19 3.50863659,19 L9,19 L9,24.4913634 C9,25.3335799 9.67157288,26 10.5,26 C11.3342028,26 12,25.3245604 12,24.4913634 L12,19 L17.4913634,19 C18.3335799,19 19,18.3284271 19,17.5 C19,16.6657972 18.3245604,16 17.4913634,16 L12,16 L12,10.5086366 C12,9.66642015 11.3284271,9 10.5,9 C9.66579723,9 9,9.67543961 9,10.5086366 L9,16 Z" id="Rectangle-271" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

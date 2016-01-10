@@ -1,0 +1,17 @@
+.photo-modal.ui.modal
+  i.close.i-close.photo-modal__close
+  .photo-modal__content
+    = link_to "#", class: "photo-modal__report-button report-button" do
+      i.i-flag
+      span Report
+
+    = image_tag "http://placehold.it/294x294", class: "photo-modal__image"
+
+    .image-panel.photo-modal__image-panel
+      .image-panel__name Jennifer Stage
+      .image-panel__social.image-panel__social--time
+        i.i-clock
+        span 3h
+      .image-panel__social.image-panel__social--likes
+        i.i-heart
+        span 120

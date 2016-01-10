@@ -1,0 +1,25 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$foodfaves-logo-color: $primary-color;
+$body-text-color: $primary-text-color;
+
+$body-darker-background-color: $ternary-background-color;
+
+@include border-box-sizing;
+
+body {
+  font-family: 'museo_sans_rounded';
+  font-size: $medium-font-size;
+
+  color: $body-text-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body--darker {
+  background-color: $body-darker-background-color;
+}

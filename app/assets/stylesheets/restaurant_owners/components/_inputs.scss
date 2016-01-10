@@ -1,0 +1,260 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$input-border-color: $primary-border-color;
+$input-subtitle-color: $secondary-text-color;
+$input-divider-color: $secondary-text-color;
+$input-error-color: $primary-color;
+$input-error-border-color: $primary-color;
+
+$layout-inputs: (
+  gutter-position: after,
+  gutters: 0.43,
+  columns: 6
+);
+
+@include with-layout($layout-inputs) {
+  .inputs {
+    @include container();
+
+    @include tablet {
+      padding-top: 40px;
+    }
+
+    &--high {
+      @include tablet {
+        padding-top: 30px;
+      }
+    }
+
+    &--higher {
+      @include tablet {
+        padding-top: 15px;
+      }
+    }
+
+    &__wrapper {
+      @include container();
+      padding: 20px 20px 30px 20px;
+
+      @include tablet {
+        padding: {
+          right: 30px;
+          left: 30px;
+        }
+      }
+
+      &--condensed {
+        @include only-mobile {
+          padding-bottom: 15px;
+        }
+      }
+
+      &--higher {
+        @include tablet {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &__title {
+      display: inline;
+
+      margin: {
+        top: 0;
+        bottom: 20px;
+      }
+
+      @include tablet {
+        display: inline-block;
+      }
+
+      &--lowered {
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-size: $smaller-font-size;
+
+      font-weight: 300;
+
+      color: $input-subtitle-color;
+
+      @include tablet {
+        font-size: $medium-font-size;
+      }
+    }
+
+    &__left-column {
+      @include tablet {
+        @include span(2);
+      }
+    }
+
+    &__right-column {
+      @include tablet {
+        @include span(4 last);
+      }
+    }
+
+    &__divider {
+      margin: 0 3px;
+
+      color: $input-divider-color;
+
+      @include tablet {
+        margin: 0 8px;
+      }
+    }
+
+    &__arrow-wrapper {
+      position: relative;
+
+      &--inline {
+        display: inline;
+      }
+    }
+
+    &__title-input-wrapper {
+      display: block;
+      clear: both;
+
+      padding-bottom: 25px;
+    }
+
+    &__row {
+      @include container();
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--condensed {
+        margin-bottom: 10px;
+
+        @include tablet {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__remove {
+      float: right;
+    }
+
+    &__round-button {
+      @include tablet {
+        display: inline;
+        float: right;
+
+        margin: {
+          top: 30px;
+          left: 15px;
+        }
+      }
+
+      &--higher {
+        @include tablet {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &__edit {
+      margin-left: 10px;
+
+      color: $primary-text-color;
+    }
+
+    &__fake-input {
+      font-size: $smaller-font-size;
+      font-weight: 300;
+      line-height: 30px;
+
+      height: 30px;
+
+      @include tablet {
+        font-size: $medium-font-size;
+        line-height: normal;
+
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.input-wrapper {
+  &--inline {
+    display: inline;
+  }
+
+  &--push-right {
+    margin-left: 35px;
+
+    @include tablet {
+      float: right;
+
+      margin-left: 0;
+    }
+  }
+
+  &--title {
+    display: inline-block;
+  }
+
+  &--block {
+    display: block;
+  }
+}
+
+.input {
+  font-size: $smaller-font-size;
+
+  font-weight: 300;
+
+  width: 100%;
+  height: 30px;
+
+  border: {
+    top: 0;
+    right: 0;
+    bottom: 1px solid $input-border-color;
+    left: 0;
+  }
+  border-radius: 0;
+
+  background-color: $transparent;
+
+  -webkit-appearance: none;
+
+  @include tablet {
+    font-size: $medium-font-size;
+
+    padding-bottom: 10px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--condensed {
+    max-width: 120px;
+
+    @include tablet {
+      max-width: 155px;
+    }
+  }
+
+  &--datepicker {
+    cursor: pointer;
+  }
+
+  &.error {
+    border-color: $input-error-border-color;
+  }
+}

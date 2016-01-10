@@ -1,0 +1,201 @@
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+.nav {
+  width: 100%;
+
+  li {
+    float: left;
+    width: 24.8%;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      color: $text-color-dark;
+    }
+  }
+
+  sup {
+    display: inline;
+  }
+
+  .__nav-links {
+    float: right;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-link {
+  height: 50px;
+  text-align: right;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+
+  @media #{$phones-max} {
+    display: none;
+  }
+
+  &.nav-link--right {
+    margin-right: 0;
+  }
+
+  &.__nav-text {
+    line-height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 15px;
+    color: $text-color-dark;
+    text-decoration: none;
+    padding: 0 5px;
+  }
+
+  .__nav-link-icon {
+    margin-right: 10px;
+
+    svg {
+      height: 50px;
+      vertical-align: middle;
+
+      path:nth-child(2) {
+        fill: $color-white;
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  .__button-text {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    font-family: 'museo_sans_rounded';
+  }
+
+  .__nav-button-text {
+    display: inline;
+    vertical-align: middle;
+    font-size: 16px;
+    color: $color-white;
+    line-height: 0;
+    font-family: 'museo_sans_rounded';
+  }
+}
+
+.nav-header {
+  width: 100%;
+
+  .__logo-name {
+    @media #{$phones-max} {
+      text-align: center;
+    }
+  }
+
+  .__icon {
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    cursor: pointer;
+
+    svg {
+      vertical-align: middle;
+
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  .__button-wrapper {
+    text-align: right;
+
+    @media #{$phones-max} {
+      text-align: center;
+    }
+  }
+
+  .__button-icon {
+    background-image: asset-url('icons/appstore_icon.svg');
+    margin-top: -3px;
+  }
+
+  .__nav-link-text {
+    font-family: 'museo_sans_rounded';
+    font-weight: 700;
+  }
+
+  &.mobile-only {
+    .__button-wrapper {
+      margin-top: 25px;
+    }
+  }
+
+  .nav-link--right {
+    display: none;
+  }
+}
+
+// ===== tabular nav - fixed on index page ===== //
+.four-tab-nav {
+  background-color: $color-white;
+  height: 85px;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid $border-color-light;
+
+  @media #{$phones-max} {
+    display: none;
+  }
+
+  .__tab {
+    position: relative;
+    height: 85px;
+    cursor: pointer;
+    width: 25%;
+
+    &.active {
+      a {
+        color: $color-primary;
+      }
+
+      .__tab-border {
+        display: block;
+      }
+    }
+  }
+
+  .__tab-name {
+    font-family: 'museo_sans_rounded';
+    font-weight: 500;
+    font-size: 18px;
+    color: $text-color-dark;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    padding-top: 32px;
+
+    &:hover {
+      color: $color-primary;
+      background-color: transparent;
+    }
+  }
+
+  .__tab-border {
+    display: none;
+    width: 80%;
+    border-top: 5px solid $color-primary;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+
+    &.__active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+section.placeholder
+  .placeholder__logo-wrapper
+    i.i-location.big-logo
+  .placeholder__description-wrapper
+    p.description.description--bold
+     | You haven’t added your restaurant location yet. Make sure your customers can easily find you.
+
+  = link_to "Add location", new_restaurants_location_path, remote: true, class: "placeholder__link standard-button standard-button--with-icon i-plus"

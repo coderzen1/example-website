@@ -1,0 +1,11 @@
+section.cover
+  .cover__btn-wrapper
+    = link_to "#", class: "upload-button cover__btn" do
+      i.i-camera.upload-button__icon
+      .upload-button__text.upload-button__text--uppercase Upload restaurant photo
+
+  .cover__info
+    h1.cover__title= current_restaurant.name
+    .cover__user
+      i.i-generic-avatar.cover__avatar
+      h2.cover__username= current_restaurant.restaurant_owner.name

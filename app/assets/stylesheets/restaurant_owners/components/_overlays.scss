@@ -1,0 +1,43 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+$image-overlay-background-gradient: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.69));
+
+$body-overlay-background-color: rgba(0, 0, 0, 0.2);
+
+%base-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-overlay {
+  @extend %base-overlay;
+
+  padding: 10px;
+
+  background-image: $image-overlay-background-gradient;
+
+  &__report-button {
+    float: right;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
+}
+
+.body-overlay {
+  &:after {
+    @extend %base-overlay;
+    position: fixed;
+
+    content: '';
+
+    background-color: $body-overlay-background-color;
+  }
+}

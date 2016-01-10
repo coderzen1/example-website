@@ -1,0 +1,24 @@
+{
+  "definitions": {
+    "pagination": {
+      "type": "object",
+      "required": [
+        "previous",
+        "next",
+        "current",
+        "per_page",
+        "count",
+        "pages"
+      ],
+
+      "properties": {
+        "previous": { "type": ["null", "integer"] },
+        "next": { "type": ["null", "integer"] },
+        "current": { "type": ["null", "integer"] },
+        "per_page": { "type": ["null", "integer"] },
+        "count": { "type": "integer" },
+        "pages": { "type": "integer"}
+      }
+    }
+  }
+}

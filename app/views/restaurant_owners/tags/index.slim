@@ -1,0 +1,18 @@
+section.content
+  / TODO: change when real values available
+  - if @restaurant.blank?
+    = render "placeholder"
+  - else
+    = render "main_content"
+
+= render 'restaurant_owners/shared/photo_modal'
+/ #notification
+/ #tags
+/   = render partial: "tag", collection: @tags
+/
+/ - if @tags.next_page
+/   = link_to "More tags", restaurants_tags_path(page: 2), remote: true, class: :"btn btn-success", id: "more-tags"
+/
+/ #photos
+/
+/ #modal-tag-report

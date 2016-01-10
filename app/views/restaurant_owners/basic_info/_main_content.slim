@@ -1,0 +1,47 @@
+section.info.info--bordered
+  .info__left-column
+    h3.info__title.title Description
+    = link_to "Edit", edit_restaurants_basic_info_path(id: @restaurant.id), class: "info__edit standard-link js-toggle-modal", remote: true
+
+  .info__right-column
+    p.description
+      | Whether you are going to have a business lunch, romantic candlelight
+      | dinner or just a drink after a busy day, the five-star Grand Hotel Bohemia
+      | will always meet your needs. Our luxury Franz Josef restaurant offers not
+      | only keenly price lunch menu but also a la cart menu specially created by
+      | our chef including a variety of seasonal offerings. You can also enjoy unwind
+      | over a cup of coffee or another drink of your choice in the Café-bar
+
+    = link_to "Read more", "#", class: "standard-link standard-link--lowered js-read-more"
+
+section.info.info--bordered
+  .info__left-column
+    h3.info__title.title Opening hours
+    = link_to "Edit", edit_restaurants_basic_info_path(id: @restaurant.id), class: "info__edit standard-link js-toggle-modal", remote: true
+
+  .info__right-column
+    h4.info__subtitle Monday - Friday
+    p.description 11:00 AM - 02:00PM
+
+    h4.info__subtitle Saturday
+    p.description 11:00 AM - 01:00PM
+
+    h4.info__subtitle Sunday
+    p.description CLOSED
+
+section.info.info--bordered
+  .info__left-column
+    h3.info__title.title Contact info
+    = link_to "Edit", edit_restaurants_basic_info_path(id: @restaurant.id), class: "info__edit standard-link js-toggle-modal", remote: true
+  .info__right-column
+    h4.info__subtitle Address
+    p.description= @restaurant.restaurant_owner.address.address
+
+    h4.info__subtitle Phone
+    p.description= @restaurant.restaurant_owner.phone
+
+    h4.info__subtitle E-mail
+    p.description= @restaurant.restaurant_owner.email
+
+    h4.info__subtitle Website
+    p.description= @restaurant.restaurant_owner.website

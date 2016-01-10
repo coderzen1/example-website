@@ -1,0 +1,33 @@
+.footer__container
+  .footer__mobile-column
+    .footer__text
+      | Facebook
+      = link_to "Foodfaves", "#", class: "footer__link footer__link--push-right"
+    .footer__text
+      | Twitter
+      = link_to "@foodfave", "#", class: "footer__link footer__link--push-right"
+    .footer__text
+      | Instagram
+      = link_to "@officialfoodfave", "#", class: "footer__link footer__link--push-right"
+
+  .footer__left-column
+    .foodfaves-logo.foodfaves-logo--normalized.foodfaves-logo--small
+      = inline_svg('icons/foodfaves_logo_trademark.svg', class: 'footer__logo')
+    .footer__text &copy; 2015 Foodfaves. All rights reserved.
+    .footer__text.footer__text--lowered
+      = link_to "Privacy policy", privacy_policy_path, class: "footer__link"
+      = link_to "Terms of use", terms_of_use_path, class: "footer__link footer__link--spaced"
+
+  .footer__right-column
+    .footer__text
+      | Like&nbsp;
+      = link_to "Foodfaves", "#", class: "footer__link"
+      | &nbsp;on Facebook
+    .footer__text.footer__text--lowered
+      | Follow&nbsp;
+      = link_to "@foodfave", "#", class: "footer__link"
+      | &nbsp;on Twitter
+    .footer__text.footer__text--lowered
+      | Follow&nbsp;
+      = link_to "@officialfoodfave", "#", class: "footer__link"
+      | &nbsp;on Instagram

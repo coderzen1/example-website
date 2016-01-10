@@ -1,0 +1,16 @@
+#location
+  #edit-map
+  p Drop the pin on the map to add location
+  p Search location:
+  input#search-address 
+  h5 LOCATION
+  = simple_form_for @restaurant, url: restaurants_location_path(id: @restaurant), remote: true do |f|
+    = f.input :lng
+    = f.input :lat
+    = f.fields_for :address, @restaurant.address do |a|
+      = a.input :address
+      = a.input :zip_code
+      = a.input :city
+      = a.input :state
+      = a.input :country, as: :string
+    = f.submit "Update"

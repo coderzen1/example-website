@@ -1,0 +1,18 @@
+nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li  = link_to 'Activations', admin_activations_path
+        li  = link_to 'Reported photos', admin_reported_photos_path
+        li  = link_to 'Tags', ''
+        li  = link_to 'Super users', admin_super_users_path
+        li  = link_to 'Restaurant owners', admin_restaurant_owners_path
+        li  = link_to 'Users', admin_users_path
+        li  = link_to 'Payments', ''
+        li  = link_to 'Log out', destroy_super_user_session_path, :method=>'delete'

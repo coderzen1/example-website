@@ -1,0 +1,46 @@
+@import 'variables';
+
+// === breakpoints === //
+@mixin only-mobile {
+  @media #{$only-mobile} { @content; }
+}
+
+@mixin only-tablet {
+  @media #{$only-tablet} { @content; }
+}
+
+@mixin mobile-big {
+  @media #{$mobile-big} { @content; }
+}
+
+@mixin tablet {
+  @media #{$tablet} { @content; }
+}
+
+@mixin desktop {
+  @media #{$desktop} { @content; }
+}
+
+@mixin large {
+  @media #{$large} { @content; }
+}
+
+// === retina === //
+@function retina-path($path) {
+  $ext-index: str-index($path, '.');
+  @return str-insert($path, '@2x', $ext-index);
+}
+
+@mixin retina-image($img-path, $size: auto, $retina-size: auto) {
+
+  background-image: asset-url($img-path);
+  background-size: $size;
+
+  $retina-img-path: retina-path($img-path);
+  $retina-size: if($retina-size == auto, $size, $retina-size);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+    background-image: asset-url($retina-img-path);
+    background-size: $retina-size;
+  }
+}

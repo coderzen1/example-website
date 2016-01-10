@@ -1,0 +1,68 @@
+{
+  "definitions": {
+    "photo": {
+      "type": "object",
+      "required": [
+        "id",
+        "owner_id",
+        "owner_type",
+        "owner_name",
+        "owner_profile_picture",
+        "photo_url",
+        "created_at",
+        "favorited",
+        "favorites_count",
+        "restaurant",
+        "tags"
+      ],
+      "properties": {
+        "id": { "type": "integer" },
+        "owner_id": { "type": "integer" },
+        "owner_type": { "type": "string" },
+        "owner_name": { "type": "string" },
+        "owner_profile_picture": { "type": ["string", "null"] },
+        "photo_url": { "type": "string" },
+        "photo_caption": { "type": "string" },
+        "created_at": { "type": "string" },
+        "favorited": { "type": "boolean" },
+        "favorites_count": { "type": ["integer", "null"] },
+
+        "restaurant": {
+          "type": "object",
+          "required": [
+            "id",
+            "name",
+            "lat",
+            "lng"
+          ],
+          "properties": {
+            "id": { "type": "integer" },
+            "name": { "type": "string" },
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          }
+        },
+
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "taggings_count", "category_id"],
+            "properties": {
+              "id": { "type": "integer" },
+              "name": { "type": "string" },
+              "taggings_count": { "type": "integer" },
+              "category_id": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "type": "object",
+  "required": ["response"],
+  "properties": {
+    "response": { "$ref": "#/definitions/photo" }
+  }
+}

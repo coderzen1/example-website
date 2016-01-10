@@ -1,0 +1,10 @@
+var notification = $('#notification').hide().empty();
+notification.html('<div class="alert alert-success" role="alert">Tag is reported!</div>').slideDown().delay(2000).slideUp();
+$('#report-tag').hide();
+
+$('#modal-tag-report').html('<%=j render "shared/modal" %>');
+
+$('.modal-title').append('Suggest new tags for photos for which this is only tag');
+$('.modal-body').html('<%=j render "suggest_form"  %>');
+
+$('#modal').modal('show');

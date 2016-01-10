@@ -1,0 +1,30 @@
+.page-wrapper.about.js-page data-page-name="about"
+  .single-section-wrapper.intro-section.nav1
+    = render "public/header"
+
+  .single-section-wrapper.about-foodfaves
+    .container
+      h1.__title--highlight =phrase("about-page-title")
+
+      .__images-wrapper.__images-wrapper--standard.horizontal-images
+        .row
+          .col-xs-0.col-sm-3.__image-1
+            / .__image.__image--hot
+            =image_tag('about/hot.png', class: '__image')
+
+          .col-xs-6.col-sm-3.__image-2
+            / .__image.__image--restaurants.__image--lowered
+            =image_tag('about/restaurants.png', class: '__image __image--lowered')
+
+          .col-xs-0.col-sm-3.__image-3
+            / .__image.__image--tasty
+            =image_tag('about/tasty.png', class: '__image')
+
+          .col-xs-6.col-sm-3.__image-4
+            / .__image.__image--myprofile.__image--lowered
+            =image_tag('about/myprofile.png', class: '__image __image--lowered')
+
+      p.__text
+        = phrase("about-page-text")
+
+  = render "public/footer"

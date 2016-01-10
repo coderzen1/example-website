@@ -1,0 +1,141 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$photo-modal-background-color: $dark-color;
+$photo-modal-close-button-color: $light-color;
+
+$primary-modal-background-color: $light-color;
+
+$static-modal-background-color: $light-color;
+$static-modal-border-color: $primary-border-color;
+
+$side-modal-border: $primary-border-color;
+
+$side-content-background-color: $ternary-background-color;
+$side-content-big-width: 615px;
+
+$side-content-loader-background-color: $primary-color;
+
+// Overriding default modal settings
+.ui.modal.photo-modal {
+  border-radius: 0;
+  background-color: $photo-modal-background-color;
+  box-shadow: none;
+}
+
+.photo-modal {
+  padding-top: 100px;
+
+  &__content {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  &__report-button {
+    display: block;
+
+    background-color: $transparent;
+  }
+
+  &__close:before {
+    color: $photo-modal-close-button-color;
+  }
+
+  &__image-panel {
+    margin-top: 10px;
+  }
+}
+
+.side-modal {
+  border-bottom: 1px solid $side-modal-border;
+  background-color: $primary-modal-background-color;
+
+  &__content {
+    padding-bottom: 10px;
+
+    &--loader {
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+
+      width: 100%;
+
+      background: {
+        color: $side-content-loader-background-color;
+        image: asset-url('loaders/ffloader.gif');
+        position: center center;
+        repeat: no-repeat;
+      }
+
+      @include tablet {
+        top: 90px;
+      }
+    }
+
+  }
+
+  &__disclaimer {
+    padding: 0 20px;
+
+    @include tablet {
+      padding: 0 30px;
+    }
+  }
+}
+
+.static-modal {
+  border: {
+    top: 1px solid $static-modal-border-color;
+    bottom: 1px solid $static-modal-border-color;
+  }
+  background-color: $static-modal-background-color;
+
+  @include tablet {
+    //Added extra 2 pixels to compensate for borders
+    @include container(617px);
+    border: {
+      right: 1px solid $static-modal-border-color;
+      left: 1px solid $static-modal-border-color;
+    }
+    border-radius: 4px;
+  }
+}
+
+.side-content {
+  position: fixed;
+  z-index: $z-modal;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+
+  overflow-y: scroll;
+
+  width: 100%;
+
+  transition: left 0.15s ease-in;
+
+  background-color: $side-content-background-color;
+
+  will-change: left;
+
+  @include tablet {
+    right: -$side-content-big-width;
+    left: auto;
+
+    width: $side-content-big-width;
+
+    transition: right 0.15s ease-in;
+
+    will-change: right;
+  }
+
+  &--toggled {
+    left: 0;
+
+    @include tablet {
+      right: 0;
+      left: auto;
+    }
+  }
+}

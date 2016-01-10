@@ -1,0 +1,18 @@
+.map.js-map data-latitude="#{f.object.lat || '' }" data-longitude="#{f.object.lng || '' }" data-form= "true" data-modal= "#{modal}"
+p.disclaimer.side-modal__disclaimer Move the pin on the map to adjust coordinates
+section.inputs
+  .divider.is-visible-tablet
+    h3.inputs__title.title.title--small= modal ? 'Details' : 'Location'
+  .inputs__wrapper
+    = f.simple_fields_for :address, f.object.address do |ff|
+      = render "restaurant_owners/shared/standard_input", f: ff, input_title: "Address", input_name: :address, type: :string, input_class: 'js-restaurant-address'
+      = render "restaurant_owners/shared/standard_input", f: ff, input_title: "ZIP code", input_name: :zip_code, type: :string, input_class: 'js-restaurant-zipcode'
+      = render "restaurant_owners/shared/standard_input", f: ff, input_title: "City", input_name: :city, type: :string, input_class: 'js-restaurant-city'
+      = render "restaurant_owners/shared/standard_input", f: ff, input_title: "State", input_name: :state, type: :string, input_class: 'js-restaurant-state'
+      = render "restaurant_owners/shared/standard_input", f: ff, input_title: "Country", input_name: :country, type: :string, input_class: 'js-restaurant-country'
+      = render "restaurant_owners/shared/fake_input", input_title: "Coordinates", input_name: "js-restaurant-coordinates", placeholder: "#{f.object.formatted_coordinates}"
+    = f.input :lat, as: :hidden, input_html: { class: "js-restaurant-lat" }
+    = f.input :lng, as: :hidden, input_html: { class: "js-restaurant-lng" }
+
+    - unless modal
+      = f.submit 'Next', class: 'standard-button standard-button--fullwidth-mobile inputs__round-button inputs__round-button--higher'

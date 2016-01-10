@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta charset="UTF-8"
+    title
+      = content_for?(:title) ? yield(:title) : 'Foodfave'
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Foodfaves'}"
+    script type="text/javascript" src='http://maps.google.com/maps/api/js?libraries=places'
+    = stylesheet_link_tag "restaurant_owners", :media => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'restaurant_owners', 'data-tubolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .wrap
+      header.header
+        = render 'layouts/authorized/navigation'
+
+      main role="main"
+        = render 'layouts/messages'
+        = render 'layouts/authorized/cover'
+        = render 'layouts/authorized/restaurant_navigation_links'
+        = yield
+
+      = render 'layouts/authorized/modal'
+    footer.footer.footer--sticky
+      = render 'layouts/authorized/footer'

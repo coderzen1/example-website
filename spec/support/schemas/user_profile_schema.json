@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": ["response"],
+  "properties": {
+    "response": {
+      "type": "object",
+      "required": [
+        "username",
+        "email",
+        "id",
+        "profile_picture",
+        "location",
+        "follower_count",
+        "following_count",
+        "private_faved_photos",
+        "faved_restaurants_count",
+        "following_this_user"
+      ],
+      "properties": {
+        "id": { "type": "integer" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "profile_picture": { "type": ["string", "null"]},
+        "location": { "type": "string" },
+        "radius": { "type": ["integer", "null"] },
+        "private_faved_photos": { "type": ["string", "null"] },
+        "follower_count": { "type": "integer"},
+        "following_count": { "type": "integer"},
+        "faved_restaurants_count": { "type": "integer" },
+        "following_this_user": { "type": "boolean" }
+      }
+    }
+  }
+}
+

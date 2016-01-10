@@ -1,0 +1,29 @@
+section.content.content--lowered-tablet
+  .static-modal
+    = simple_form_for @form, url: wizard_path, method: :put do |f|
+      .static-modal__header.modal-header.modal-header--borderless.modal-header--steps.modal-header--step-2
+        .modal-header__icon-wrapper
+          i.modal-header__icon.modal-header__icon--dark.i-spoon-knife-icon
+        h3.modal-header__title.modal-header__title Restaurant owners registration
+        = link_to "Log out", destroy_restaurant_owner_session_path, method: :delete, class: "modal-header__link modal-header__link--uppercase standard-link is-visible-tablet"
+
+      .static-modal__content
+        section.inputs
+          .divider
+            h3.inputs__title.inputs__title--lowered.title.title--small General
+          .inputs__wrapper.inputs__wrapper--condensed
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "Restaurant name", input_name: :restaurant_name, type: :string
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "Owner name", input_name: :owner_name, type: :string
+            .inputs__row
+              .inputs__left-column
+                .inputs__subtitle  Date of birth
+              .inputs__right-column
+                .inputs__arrow-wrapper
+                  = f.input :owner_birth, label: false, wrapper_html: { class: "input-wrapper--inline" }, input_html: { autocomplete: "off", class: "input--datepicker", id: "datepicker" }
+                  .dropdown-icon.i-dropdown-arrow
+
+            = f.submit 'Next', class: 'standard-button standard-button--fullwidth-mobile inputs__round-button inputs__round-button--higher'
+
+  section.disclaimers.is-visible-only-mobile
+    .disclaimer.disclaimer--heavy Already have an account?
+    = link_to "Log in", new_restaurant_owner_session_path, class: "standard-link disclaimers__link"

@@ -1,0 +1,85 @@
+//
+// Icon Font: foodfaves-icons
+//
+
+@font-face {
+  font-family: "foodfaves-icons";
+  src: font-url("foodfaves/foodfaves-icons.eot");
+  src: font-url("foodfaves/foodfaves-icons.eot?#iefix") format("embedded-opentype"),
+       font-url("foodfaves/foodfaves-icons.woff") format("woff"),
+       font-url("foodfaves/foodfaves-icons.ttf") format("truetype"),
+       font-url("foodfaves/foodfaves-icons.svg#foodfaves-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "foodfaves-icons";
+    src: font-url("foodfaves/foodfaves-icons.svg#foodfaves-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.i-apple-icon:before,
+.i-arrow-left:before,
+.i-basic-info:before,
+.i-camera:before,
+.i-checkbox:before,
+.i-checkbox-active:before,
+.i-clock:before,
+.i-close:before,
+.i-dropdown-arrow:before,
+.i-flag:before,
+.i-footer-logo:before,
+.i-generic-avatar:before,
+.i-heart:before,
+.i-location:before,
+.i-menu:before,
+.i-pencil:before,
+.i-photos:before,
+.i-plus:before,
+.i-sandwich-icon:before,
+.i-spoon-knife-icon:before,
+.i-star:before,
+.i-tags:before,
+.i-trash:before {
+  display: inline-block;
+  font-family: "foodfaves-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.i-apple-icon:before { content: "\f114"; }
+.i-arrow-left:before { content: "\f111"; }
+.i-basic-info:before { content: "\f104"; }
+.i-camera:before { content: "\f102"; }
+.i-checkbox:before { content: "\f115"; }
+.i-checkbox-active:before { content: "\f116"; }
+.i-clock:before { content: "\f10b"; }
+.i-close:before { content: "\f10d"; }
+.i-dropdown-arrow:before { content: "\f112"; }
+.i-flag:before { content: "\f10a"; }
+.i-footer-logo:before { content: "\f109"; }
+.i-generic-avatar:before { content: "\f103"; }
+.i-heart:before { content: "\f10c"; }
+.i-location:before { content: "\f105"; }
+.i-menu:before { content: "\f106"; }
+.i-pencil:before { content: "\f113"; }
+.i-photos:before { content: "\f107"; }
+.i-plus:before { content: "\f110"; }
+.i-sandwich-icon:before { content: "\f100"; }
+.i-spoon-knife-icon:before { content: "\f101"; }
+.i-star:before { content: "\f10f"; }
+.i-tags:before { content: "\f108"; }
+.i-trash:before { content: "\f117"; }

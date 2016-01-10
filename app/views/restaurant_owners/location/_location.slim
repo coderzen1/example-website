@@ -1,0 +1,14 @@
+.row
+  .col-md-3
+    h5 LOCATION
+    = link_to "Edit",  edit_restaurants_location_path(id: @restaurant), class: "btn btn-info", remote: true
+  .col-md-9
+    div Address
+    = @restaurant.address.address
+    div Coordinates
+    div Longitude
+    = @restaurant.lng
+    div Latitude
+    = @restaurant.lat
+  #restaurant-map
+    = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=600x300&maptype=roadmap&markers=color:orange%7Clabel:G%7C#{@restaurant.lat},#{@restaurant.lng}&key=#{Rails.application.secrets.google_api_key}"

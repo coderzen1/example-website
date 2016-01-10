@@ -1,0 +1,24 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+$divider-backgrond-color: $ternary-background-color;
+$divider-border-color: $primary-border-color;
+
+.divider {
+  @include only-mobile {
+    line-height: 50px;
+
+    height: 45px;
+    padding: 0 20px;
+
+    border: {
+      top: 1px solid $divider-border-color;
+      bottom: 1px solid $divider-border-color;
+    }
+    background-color: $divider-backgrond-color;
+  }
+
+  @include tablet {
+    padding: 0 30px;
+  }
+}

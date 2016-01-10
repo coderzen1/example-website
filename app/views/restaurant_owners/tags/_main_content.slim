@@ -1,0 +1,20 @@
+section.tag-section
+  h3.title Recent tags at your place
+
+  .tag-section__tag-wrapper
+    - 3.times do
+      - %w[Wok International Veggie Fish].each do |i|
+        = link_to i, "#", class: "tag tag--spaced"
+
+  = link_to "Load more tags", "#", class: "standard-link tag-section__more"
+
+.section.gallery-section
+  .gallery-section__header
+    h3.title.gallery-section__title.gallery-section__title--desktop Photos tagged as "sweet"
+    h3.title.gallery-section__title.gallery-section__title--mobile Tagged as "sweet"
+    = link_to "#", class: "standard-link gallery-section__report" do
+      i.i-flag
+      span.span--desktop Report tag as inappropriate
+      span.span--mobile  Report
+
+  = render "restaurant_owners/shared/gallery"

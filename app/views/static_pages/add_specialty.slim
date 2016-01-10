@@ -1,0 +1,15 @@
+section.content.content--lowered-tablet
+  .static-modal
+    = simple_form_for :opening_hours_form, method: :put do |f|
+      .static-modal__header.modal-header.modal-header--borderless.modal-header--steps.modal-header--step-6
+        .modal-header__icon-wrapper
+          i.modal-header__icon.modal-header__icon--dark.i-spoon-knife-icon
+        h3.modal-header__title.modal-header__title Restaurant owners registration
+        = link_to "Log in", new_restaurant_owner_session_path, class: "modal-header__link modal-header__link--uppercase standard-link is-visible-tablet"
+
+      .static-modal__content
+        = render "restaurant_owners/shared/specialty_form_body", f: f, modal: false
+
+  section.disclaimers.is-visible-only-mobile
+    .disclaimer.disclaimer--heavy Already have an account?
+    = link_to "Log in", new_restaurant_owner_session_path, class: "standard-link disclaimers__link"

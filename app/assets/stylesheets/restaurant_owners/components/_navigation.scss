@@ -1,0 +1,263 @@
+@import 'restaurant_owners/components/lists';
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$navigation-link-color: $primary-text-color;
+$navigation-active-link-color: $primary-color;
+
+$navigation-sandwich-icon-color: $primary-color;
+
+$navigation-border-color: $primary-border-color;
+
+.main-nav {
+  @include container(1140px);
+
+  &__collapsible-navbar {
+    position: absolute;
+
+    display: none;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    border-top: 1px solid $navigation-border-color;
+
+    background-color: $light-color;
+
+    @include tablet {
+      position: static;
+
+      // Important used to override JS display: none triggered by mobile navigation
+      // scss-lint:disable ImportantRule
+      display: inline-block !important;
+      // scss-lint:enable ImportantRule
+
+      float: right;
+
+      width: auto;
+
+      border: 0;
+    }
+  }
+
+  &__logo {
+    width: 169px;
+    height: 22px;
+
+    @include tablet {
+      width: 192px;
+      height: 25px;
+    }
+  }
+}
+
+.navbar-mobile {
+  line-height: 62px;
+
+  display: inline-block;
+
+  float: right;
+
+  height: 60px;
+
+  padding: {
+    right: 20px;
+    left: 20px;
+  }
+
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+
+  &__icon {
+    font-size: $smaller-font-size;
+
+    color: $navigation-sandwich-icon-color;
+  }
+
+  .__open {
+    font-size: $medium-font-size;
+
+    display: none;
+  }
+
+  &.open {
+    .__closed {
+      display: none;
+    }
+
+    .__open {
+      display: inline;
+    }
+  }
+}
+
+.nav-list {
+  @extend %ul;
+
+  clear: both;
+
+  &--secondary {
+    @include container(950px);
+  }
+
+  &__item {
+    padding: 0 20px;
+
+    @include tablet {
+      margin: 0 23px;
+      padding: 0;
+    }
+  }
+}
+
+.nav-item {
+  position: relative;
+
+  display: inline-block;
+
+  height: 60px;
+
+  cursor: pointer;
+
+  @include tablet {
+    display: inline-block;
+
+    height: 90px;
+  }
+
+  &--collapsible {
+    @include only-mobile {
+      display: block;
+
+      height: 60px;
+    }
+  }
+
+  &--secondary {
+    @include only-mobile {
+      @include span(1 of 5 no-gutters);
+
+      height: 46px;
+      padding: 10px 0;
+    }
+
+    @include only-tablet {
+      margin: 0 5px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &.nav-item--active {
+      .nav-item__border {
+        display: block;
+      }
+    }
+  }
+
+  &--active,
+  &:hover {
+    .nav-item__link {
+      color: $navigation-active-link-color;
+    }
+
+    .nav-item__border {
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: $medium-font-size;
+    font-weight: 500;
+    line-height: 60px;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    color: $navigation-link-color;
+
+    @include tablet {
+      line-height: normal;
+
+      padding: 32px 25px 0 25px;
+    }
+
+    &--secondary {
+      display: none;
+
+      @include tablet {
+        display: block;
+
+        padding: 38px 40px 0 40px;
+      }
+    }
+
+    &--icon {
+      line-height: 30px;
+
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    .nav-item__link--icon {
+      border-right: 1px solid $navigation-border-color;
+    }
+  }
+
+  &__border {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    width: 60%;
+    margin: 0 auto;
+
+    border-top: 5px solid $navigation-active-link-color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    @include tablet {
+      right: initial;
+      left: initial;
+
+      width: 100%;
+    }
+  }
+}
+
+.restaurant-nav {
+  text-align: center;
+
+  border-bottom: 1px solid $navigation-border-color;
+}

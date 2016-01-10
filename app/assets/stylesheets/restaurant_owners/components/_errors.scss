@@ -1,0 +1,13 @@
+@import 'restaurant_owners/variables';
+
+$error-text-color: $primary-color;
+
+.error:not(.input) {
+  font-size: $tiny-font-size;
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  color: $error-text-color;
+}

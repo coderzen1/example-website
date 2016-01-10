@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": ["response", "count"],
+  "properties": {
+    "response": {
+      "type": "array",
+      "items": { "$ref": "photo_schema.json#/definitions/photo" }
+    },
+    "count": { "type": "integer" }
+  }
+}

@@ -1,0 +1,70 @@
+section.content
+  = simple_form_for :settings do |f|
+    section.info.info--bordered
+      .info__left-column
+        h3.info__title.title General info
+        = link_to "Edit", restaurants_settings_edit_general_info_path, remote: true, class: "info__edit standard-link"
+
+      .info__right-column
+        h4.info__subtitle Restaurant name
+        p.description= @restaurant.name
+
+        h4.info__subtitle Restaurant owner name
+        p.description= @restaurant.restaurant_owner.name
+
+        h4.info__subtitle Owner's date of birth
+        p.description= @restaurant.restaurant_owner.birthday
+
+    section.info.info--bordered
+      .info__left-column
+        h3.info__title.title Contact
+        = link_to "Edit", edit_restaurants_general_info_path(id: @restaurant.id), class: "info__edit standard-link"
+
+      .info__right-column
+        h4.info__subtitle Address
+        p.description= @restaurant.address.address
+
+        h4.info__subtitle Phone
+        p.description= @restaurant.restaurant_owner.phone
+
+        h4.info__subtitle Email
+        p.description= @restaurant.restaurant_owner.email
+
+    section.info.info--bordered
+      .info__left-column
+        h3.info__title.title Account
+        = link_to "Edit", edit_restaurants_general_info_path(id: @restaurant.id), class: "info__edit standard-link"
+
+      .info__right-column
+        h4.info__subtitle Email
+        p.description= @restaurant.restaurant_owner.email
+
+        h4.info__subtitle Password
+        p.description
+          | *********
+
+    section.info.info--bordered
+      .info__left-column
+        h3.info__title.title Announcements
+        = link_to "Edit", edit_restaurants_general_info_path(id: @restaurant.id), class: "info__edit standard-link"
+
+      .info__right-column
+        h4.info__subtitle Description
+        p.description Jamaican dinner this weekend! 50% off for pre-orders.
+
+        h4.info__subtitle Area
+        p.description Within 5 miles
+
+        h4.info__subtitle Period
+        p.description Sep 23 - Sep 26, 2015
+
+        .info__button-wrapper
+          = link_to "Add new announcement", "#", remote: :true, class: "standard-button standard-button--lowered standard-button--with-icon i-plus"
+
+    section.info.info--bordered
+      .info__left-column
+        h3.info__title.title Push notifications
+
+      .info__right-column
+        h4.info__subtitle Push notifications to users near the restaurant owners location.
+        = f.input :push_notifications, wrapper: :foodfaves_checkbox, label: "Send push notifications", label_html: { class: "checkbox-label--lowered" }, as: :boolean

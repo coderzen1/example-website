@@ -1,0 +1,3 @@
+var photos = $('#photos');
+photos.html('<%= render partial: "photo_for_tag", collection: @photos, as: :photo %>');
+photos.append('<%= @tag.report_button %>');

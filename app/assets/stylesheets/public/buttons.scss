@@ -1,0 +1,85 @@
+.button {
+  display: inline-block;
+  background-color: $color-primary;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+
+  &.__button--highlight {
+    background-color: $color-primary;
+  }
+
+  &.__button--grey {
+    background-color: $background-color-grey;
+
+    &:hover {
+      background-color: darken($background-color-grey, 8%);
+    }
+  }
+
+  &:hover {
+    background-color: darken($color-primary, 8%);
+  }
+
+  &.__button--right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .__button-icon {
+    display: inline-block;
+    height: 49px;
+    width: 30px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  .__button-text {
+    font-family: 'museo_sans_rounded';
+    font-weight: 700;
+    display: inline;
+    color: $color-white;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 52px;
+    letter-spacing: 0.7px;
+  }
+}
+
+.phone-content {
+  .button {
+    background-color: $button-color-bg-dark;
+    height: 35px;
+
+    &:hover {
+      background-color: lighten($button-color-bg-dark, 5%);
+    }
+
+    .__button-title {
+      height: 100%;
+    }
+
+    p {
+      display: inline-block;
+      color: $color-white;
+      font-size: 16px;
+      margin: 0;
+      line-height: 35px;
+    }
+
+    &.__selected {
+      background-color: $color-primary;
+      line-height: 2.2;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

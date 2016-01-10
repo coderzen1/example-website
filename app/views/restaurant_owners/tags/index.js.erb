@@ -1,0 +1,10 @@
+var tags = $('#tags');
+var more_tags = $('#more-tags');
+
+tags.append('<%= render partial: "tag", collection: @tags %>');
+
+<% if @tags.next_page %>
+  more_tags.attr('href',"<%= restaurants_tags_path(page:@tags.next_page)%>")
+<% else %>
+  more_tags.hide();
+<% end %>

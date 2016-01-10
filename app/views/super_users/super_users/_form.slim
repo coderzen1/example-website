@@ -1,0 +1,5 @@
+= simple_form_for [:admin, @super_user] do |f|
+  = f.input :email
+  = f.input :password
+  = f.input :role, as: :radio_buttons, collection: SuperUser.roles.keys, label_method: :capitalize
+  = f.submit "Send"

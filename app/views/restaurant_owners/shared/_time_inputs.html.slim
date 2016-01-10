@@ -1,0 +1,12 @@
+.inputs__row
+  .inputs__left-column
+    .inputs__subtitle= time_period
+  .inputs__right-column
+    .inputs__arrow-wrapper.inputs__arrow-wrapper--inline
+      = f.input first_input, wrapper_html: { class: "input-wrapper--inline" }, input_html: { class: "input--condensed" }, label: false, as: :select, prompt: "0:00 AM"
+      .dropdown-icon.i-dropdown-arrow
+    span.inputs__divider &nbsp;&mdash;&nbsp;
+
+    .inputs__arrow-wrapper.inputs__arrow-wrapper--inline
+      = f.input second_input, wrapper_html: { class: "input-wrapper--inline" }, input_html: { class: "input--condensed" }, label: false, as: :select, prompt: "0:00 AM"
+      .dropdown-icon.i-dropdown-arrow

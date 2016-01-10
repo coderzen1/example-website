@@ -1,0 +1,67 @@
+section.info.info--condensed-mobile
+  .info__left-column
+    h3.title.title--featured.info__title.is-visible-tablet Sweet and sour onion soup
+    = link_to "Sweet and sour onion soup", "#", class: "title title--link title--featured is-visible-only-mobile js-open-side-content"
+    = link_to "Edit", "#", class: "info__edit standard-link is-visible-tablet"
+
+  .info__right-column.info__right-column--bordered
+    .info__description-wrapper
+      h4.info__subtitle Description
+      p.description Delicious soup with fresh vegetables
+
+    .info__price-wrapper
+      h4.info__subtitle Price
+      p.description $14.99
+
+section.info.info--condensed-mobile
+  .info__left-column
+    h3.title.info__title.is-visible-tablet Chicken soup
+    = link_to "Chicken soup", "#", class: "title title--link is-visible-only-mobile js-open-side-content"
+    = link_to "Edit", "#", class: "info__edit standard-link is-visible-tablet"
+
+  .info__right-column.info__right-column--bordered
+    .info__description-wrapper
+      h4.info__subtitle Description
+      p.description Delcious soup with daily fresh vegetables and exquisite chicken
+
+    .info__price-wrapper
+      h4.info__subtitle Price
+      p.description $14.99
+
+section.info.info--condensed-mobile
+  .info__left-column
+    h3.title.info__title.is-visible-tablet Mushroom soup
+    = link_to "Mushroom soup", "#", class: "title title--link is-visible-only-mobile js-open-side-content"
+    = link_to "Edit", "#", class: "info__edit standard-link is-visible-tablet"
+
+  .info__right-column.info__right-column--bordered
+    .info__description-wrapper
+      h4.info__subtitle Description
+      p.description Four kinds of mushrooms
+
+    .info__price-wrapper
+      h4.info__subtitle Price
+      p.description $14.99
+
+section.info.info--condensed-mobile
+  .info__left-column
+    h3.title.info__title.is-visible-tablet Pizza Margherita
+    = link_to "Pizza Margherita", "#", class: "title title--link is-visible-only-mobile js-open-side-content"
+    = link_to "Edit", "#", class: "info__edit standard-link is-visible-tablet"
+
+  .info__right-column.info__right-column--bordered
+    .info__description-wrapper
+      h4.info__subtitle Description
+      p.description Tomato sauce, mozzarella, basil
+
+    .info__price-wrapper
+      h4.info__subtitle Price
+      p.description $14.99
+
+section.info
+  .info__right-column
+    .info__button-wrapper
+      = link_to "Add new specialty", new_restaurants_menu_path, remote: :true, class: "standard-button standard-button--with-icon i-plus"
+
+    .info__button-wrapper
+      = link_to "Add new featured specialty", new_restaurants_menu_path, remote: :true, class: "standard-button standard-button--with-icon i-star"

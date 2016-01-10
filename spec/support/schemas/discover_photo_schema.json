@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": ["response", "count", "pagination"],
+  "properties": {
+    "response": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "image",
+          "restaurant_id",
+          "restaurant_name",
+          "favorites_count",
+          "rating"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "restaurant_id": { "type": "integer" },
+          "restaurant_name": { "type": "string" },
+          "rating": { "type": ["string", "null"] },
+          "favorites_count": { "type": ["integer", "null"] },
+          "image": {
+            "type": "object",
+            "required": ["image"],
+            "properties": {
+              "image": {
+                "type": "object",
+                "required": ["url"],
+                "properties": {
+                  "url": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "count": { "type": "integer" },
+    "pagination": { "$ref": "pagination_schema.json#/definitions/pagination" }
+  }
+}

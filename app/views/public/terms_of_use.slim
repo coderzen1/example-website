@@ -1,0 +1,30 @@
+.page-wrapper.js-page data-page-name="terms"
+  .single-section-wrapper.intro-section.nav1
+    = render 'public/header'
+    
+  .single-section-wrapper.terms-of-use
+    .container
+      h1.terms-of-use__main-title = phrase("terms-of-use-page-title")
+      
+      .content-list
+        #tos-accordion.panel-group role="tablist" aria-multiselectable="true"
+          .panel
+            #tos-heading1.panel-heading role="tab"
+              h4.panel-title.content-list__title
+                a role="button" data-toggle="collapse" data-parent="#tos-accordion" href="#tos-collapseOne" aria-expanded="true" aria-controls="tos-collapseOne" = phrase("terms-of-use-title-1")
+            #tos-collapseOne.panel-collapse.collapse.in role="tabpanel" aria-labelledby="tos-heading1"
+              .panel-body
+                p = phrase("terms-of-use-1")
+          
+          - 25.times do |i|
+            .panel
+              .panel-heading role="tab" id=("tos-heading"+"#{i+2}")
+                h4.panel-title.content-list__title
+                  a.collapsed role="button" data-toggle="collapse" data-parent="#tos-accordion" href=("#tos-collapse"+"#{i+2}") aria-expanded="false" aria-controls=("tos-collapse"+"#{i+2}")
+                    = phrase("terms-of-use-title-" + "#{(i + 2)}")
+              
+              .panel-collapse.collapse id=("tos-collapse"+"#{i+2}") role="tabpanel" aria-labelledby=("tos-heading"+"#{i+2}")
+                .panel-body
+                  p = phrase("terms-of-use-" + "#{i+2}")
+                  
+  = render 'public/footer'

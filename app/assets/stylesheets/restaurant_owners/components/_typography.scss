@@ -1,0 +1,142 @@
+$standard-link-color: $primary-color;
+$standard-link-hover-color: darken($standard-link-color, 10%);
+
+$title-link-color: $primary-text-color;
+$featured-title-star-color: $primary-color;
+$lighter-title-color: $secondary-text-color;
+
+$disclaimer-color: $secondary-text-color;
+$disclaimer-dark-color: $ternary-text-color;
+
+.standard-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+
+  transition: color 0.15s ease-in;
+
+  color: $standard-link-color;
+
+  @include tablet {
+    font-size: $smaller-font-size;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  span {
+    margin-left: 12px;
+  }
+
+  .span--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .span--desktop {
+    display: none;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+
+  &:hover {
+    color: $standard-link-hover-color;
+  }
+
+  &--lowered {
+    display: inline-block;
+
+    margin-top: 20px;
+  }
+}
+
+.description {
+  font-size: $smaller-font-size;
+  font-weight: 300;
+  line-height: 25px;
+
+  margin: 0;
+
+  @include tablet {
+    font-size: $medium-font-size;
+    line-height: 30px;
+  }
+
+  &--bold {
+    font-weight: 500;
+
+    @include tablet {
+      line-height: 30px;
+    }
+  }
+}
+
+.title {
+  @include tablet {
+    text-transform: uppercase;
+  }
+
+  &--link {
+    font-size: $smaller-font-size;
+    font-weight: 500;
+    line-height: 18px;
+
+    display: block;
+
+    padding: 15px 20px 15px 0;
+
+    color: $title-link-color;
+
+    @include tablet {
+      line-height: 28px;
+    }
+  }
+
+  &--featured:after {
+    font-family: 'foodfaves-icons';
+
+    margin-left: 8px;
+
+    content: '\f10f';
+    vertical-align: 1px;
+
+    color: $featured-title-star-color;
+  }
+
+  &--small {
+    @include only-mobile {
+      font-size: $smaller-font-size;
+    }
+  }
+
+  &--lighter {
+    @include only-mobile {
+      color: $lighter-title-color;
+    }
+  }
+}
+
+.disclaimer {
+  font-size: $tiny-font-size;
+  font-weight: 300;
+
+  display: inline-block;
+
+  color: $disclaimer-color;
+
+  @include tablet {
+    font-size: $smaller-font-size;
+  }
+
+  &--heavy {
+    font-weight: 500;
+
+    color: $disclaimer-dark-color;
+  }
+
+  &--higher {
+    margin-top: 0;
+  }
+}

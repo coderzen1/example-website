@@ -1,0 +1,301 @@
+.explore-places-section {
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @media #{$phones-max} {
+    height: 720px;
+    padding-top: 0;
+  }
+
+  &.__explore-places-bg {
+    width: 100%;
+    height: 100%;
+    background: {
+      image: asset-url('explore_places/background_map.jpg');
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
+
+  .__location-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .__location-icon {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+
+    &.__location-icon-mobile {
+      background-size: 35px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &.__location-icon--lft-top-left {
+      top: 25%;
+      left: 45%;
+
+      &.up {
+        top: 24%;
+      }
+
+      &.down {
+        top: 26%;
+      }
+    }
+
+    &.__location-icon--lft-middle-right {
+      top: 40%;
+      left: 70%;
+
+      &.up {
+        top: 39%;
+      }
+
+      &.down {
+        top: 41%;
+      }
+    }
+
+    &.__location-icon--lft-bottom-left {
+      top: 65%;
+      left: 45%;
+
+      &.up {
+        top: 64%;
+      }
+
+      &.down {
+        top: 66%;
+      }
+    }
+
+    &.__location-icon--rt-middle-right {
+      top: 60%;
+      left: 40%;
+
+      &.up {
+        top: 59%;
+      }
+
+      &.down {
+        top: 61%;
+      }
+    }
+
+    &.__location-icon--rt-bottom-left {
+      top: 80%;
+      left: 10%;
+
+      &.up {
+        top: 79%;
+      }
+
+      &.down {
+        top: 81%;
+      }
+    }
+
+    &.__location-icon--btm-left {
+      top: 325px;
+      left: -10px;
+
+      @media (min-width: 500px) and #{$phones-max} {
+        left: 70px;
+      }
+
+      &.up {
+        top: 315px;
+      }
+
+      &.down {
+        top: 333px;
+      }
+    }
+
+    &.__location-icon--btm-right {
+      bottom: 210px;
+      right: -10px;
+
+      @media (min-width: 500px) and #{$phones-max} {
+        right: 70px;
+      }
+
+      &.up {
+        bottom: 220px;
+      }
+
+      &.down {
+        bottom: 200px;
+      }
+    }
+  }
+
+  .__location-pin-shadow {
+    position: absolute;
+    opacity: .2;
+
+    &.__shadow-lft-top {
+      top: 33%;
+      left: 51.6%;
+
+      @media #{$phones-min} and #{$tablets-max} {
+        left: 56.5%;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 53.3%;
+      }
+    }
+
+    &.__shadow-lft-middle {
+      top: 48%;
+      left: 76.7%;
+
+      @media #{$phones-min} and #{$tablets-max} {
+        left: 81.5%;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 78.2%;
+      }
+    }
+
+    &.__shadow-lft-bottom {
+      top: 73%;
+      left: 51.7%;
+
+      @media #{$phones-min} and #{$tablets-max} {
+        left: 56%;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 53.3%;
+      }
+    }
+
+    &.__shadow-rt-top {
+      top: 68%;
+      left: 47%;
+
+      @media #{$phones-min} and #{$tablets-max} {
+        left: 51.7%;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 48.6%;
+      }
+    }
+
+    &.__shadow-rt-bottom {
+      top: 88%;
+      left: 17%;
+
+      @media #{$phones-min} and #{$tablets-max} {
+        left: 21.7%;
+      }
+
+      @media #{$tablets-min} and #{$desktops-max} {
+        left: 18.5%;
+      }
+    }
+
+    &.__shadow-btm-left {
+      top: 370px;
+      left: -1px;
+
+      @media (min-width: 500px) and #{$phones-max} {
+        left: 79px;
+      }
+    }
+
+    &.__shadow-btm-right {
+      top: 545px;
+      right: -2px;
+
+      @media (min-width: 500px) and #{$phones-max} {
+        right: 77px;
+      }
+
+      @media (max-width: 435px) {
+        top: 570px;
+      }
+
+      @media (max-width: 355px) {
+        top: 605px;
+      }
+    }
+  }
+
+  .phone {
+
+    .__explore-places-slides {
+
+      .__phone-content {
+        @media #{$phones-max} {
+          width: 190px;
+          position: static;
+        }
+      }
+    }
+  }
+
+  .__phone-content {
+    // display: none;
+    position: absolute;
+    left: 102px;
+    right: auto;
+    width: 335px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    @media #{$tablets-min} and #{$desktops-max} {
+      left: 53px;
+    }
+
+    @media #{$phones-min} and #{$tablets-max} {
+      left: 23px;
+      width: 280px;
+    }
+
+    @media #{$phones-max} {
+      position: static;
+    }
+
+    &.__active {
+      top: 0;
+      bottom: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.explore-places-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .__locations-mobile {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .__location-icon-mobile {
+    background-image: asset-url('icons/food_pin.svg');
+  }
+}

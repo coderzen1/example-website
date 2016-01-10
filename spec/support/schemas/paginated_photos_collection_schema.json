@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["response", "count", "pagination"],
+  "properties": {
+    "response": {
+      "type": "array",
+      "items": { "$ref": "photo_schema.json#/definitions/photo" }
+    },
+    "pagination": { "$ref": "pagination_schema.json#/definitions/pagination" },
+    "count": { "type": "integer" }
+  }
+}

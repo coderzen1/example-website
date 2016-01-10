@@ -1,0 +1,54 @@
+@import 'restaurant_owners/mixins';
+
+.checkbox {
+  display: none;
+
+  &-label {
+    font-size: $smaller-font-size;
+    font-weight: 300;
+
+    @include tablet {
+      font-size: $medium-font-size;
+    }
+
+    &--lowered {
+      display: block;
+
+      margin-top: 20px;
+    }
+
+    &:before {
+      @include tablet {
+        font-family: 'foodfaves-icons';
+
+        padding-right: 15px;
+
+        content: '\f115';
+      }
+    }
+
+    &:after {
+      @include only-mobile {
+        font-family: 'foodfaves-icons';
+
+        float: right;
+
+        content: '\f115';
+      }
+    }
+  }
+
+  &:checked + &-label {
+    &:before {
+      @include tablet {
+        content: '\f116';
+      }
+    }
+
+    &:after {
+      @include only-mobile {
+        content: '\f116';
+      }
+    }
+  }
+}

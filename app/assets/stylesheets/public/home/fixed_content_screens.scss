@@ -1,0 +1,270 @@
+// svg animations //
+.animation {
+  width: 100%;
+}
+
+.single-centered-animation {
+
+  .__animation-wrapper {
+    padding-top: 100px;
+    text-align: center;
+    min-height: 421px;
+  }
+
+  .__animation-wrapper-mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .__svg-animation {
+    max-height: 480px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: none;
+
+    &.__active-svg {
+      display: block;
+    }
+  }
+}
+
+.phone-content {
+  padding-top: 20px;
+
+  .__content-left,
+  .__content-right {
+    position: relative;
+    width: 100%;
+    height: 790px;
+    padding-top: 210px;
+
+    @media #{$phones-max} {
+      display: none;
+    }
+
+    .button {
+      cursor: default;
+    }
+  }
+
+  .__button-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+// ============= section specific elements ============= //
+.intro-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  .__title--highlight {
+    font-size: 48px;
+    margin-top: 60px;
+
+    span {
+      font-family: 'museo_sans_rounded';
+      font-weight: 700;
+    }
+  }
+
+  .__button-wrapper {
+    @media #{$phones-max} {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.food-display-section {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 0;
+
+  .__top-row,
+  .__bottom-row {
+    width: 100%;
+
+    @media #{$phones-max} {
+      height: 250px;
+    }
+  }
+}
+
+.video-section {
+  background-color: $color-primary;
+  height: 900px;
+
+  @media #{$phones-max} {
+    height: 740px;
+  }
+
+  .__title--top {
+    padding-top: 90px;
+    padding-bottom: 55px;
+  }
+}
+
+.video {
+  position: relative;
+  cursor: pointer;
+
+  video {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  &.playing {
+    .__video-play-control-button {
+      display: none;
+    }
+
+    &:hover {
+      .__video-play-control-button {
+        display: block;
+        background-image: asset-url('video/video_pause.svg');
+      }
+    }
+  }
+
+  .__video-play-control-button {
+    display: block;
+    height: 80px;
+    width: 80px;
+    border-radius: 30px;
+    margin-top: -30px;
+    margin-left: -30px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    background: {
+      position: center;
+      repeat: no-repeat;
+      image: asset-url('video/video_play_normal.svg');
+    }
+
+    &:hover {
+      background-image: asset-url('video/video_play_hover.svg');
+    }
+  }
+}
+
+iframe {
+  max-width: 100%;
+  max-height: 580px;
+
+  @media #{$phones-max} {
+    max-height: 420px;
+  }
+}
+
+.spread-the-word-section {
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @media #{$phones-max} {
+    height: 720px;
+    padding-top: 0;
+  }
+
+  .__main-title {
+    color: $color-white;
+  }
+
+  &.__spread-the-word-bg {
+    width: 100%;
+    height: 100%;
+    background: {
+      image: asset-url('backgrounds/spread_word_bokeh.jpg');
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+  }
+}
+
+.last-section-wrapper {
+  position: relative;
+  padding: 80px 0;
+
+  .content-wrapper {
+    width: 100%;
+
+    .__main-title {
+      font-size: 48px;
+    }
+  }
+
+  .__main-title,
+  .__button-wrapper {
+    text-align: center;
+  }
+
+  .__main-title {
+    margin-bottom: 0;
+  }
+
+  .__button-wrapper {
+    margin-top: 38px;
+
+    &.__button-wrapper--input {
+      display: inline-block;
+      margin-top: 38px;
+
+      .input {
+        display: inline-block;
+        border-radius: 5px;
+        height: 50px;
+        border: 1px solid $border-color-light;
+        width: 420px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $text-color-dark-grey;
+
+        @media #{$phones-max} {
+          width: 200px;
+        }
+      }
+
+      .button {
+        display: inline-block;
+        height: 50px;
+        font-size: 14px;
+        margin-left: 16px;
+      }
+
+      button {
+        border: 0;
+      }
+    }
+
+    .submit-button {
+      color: $color-white;
+      border: 0;
+      font-family: 'museo_sans_rounded', sans-serif;
+      font-weight: 700;
+      padding: 0 25px;
+    }
+  }
+
+  .button {
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+  }
+
+  .__button-icon {
+    background-image: asset-url('icons/appstore_icon.svg');
+    margin-top: -6px;
+  }
+}

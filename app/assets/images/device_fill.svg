@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="391px" height="795px" viewBox="0 0 391 795" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>device copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="1" y="0" width="4" height="59" rx="1.34965961"></rect>
+        <rect id="path-3" x="1" y="0" width="4" height="59" rx="1.34965961"></rect>
+        <rect id="path-5" x="1" y="0" width="4" height="59" rx="1.34965961"></rect>
+        <rect id="path-7" x="1" y="0" width="3" height="31" rx="1.34965961"></rect>
+        <path d="M219,793 L329.513707,793 C361.814795,793 388,766.813154 388,734.507761 L388,58.4922388 C388,26.1878673 361.821195,0 329.513707,0 L61.486293,0 C29.1852053,0 3,26.1868456 3,58.4922388 L3,734.507761 C3,766.812133 29.1788048,793 61.486293,793 L172,793 L172,793 C172,792.447715 176.029437,792 181,792 C181.338009,792 181.671666,792.00207 182,792.006103 L182,792 L211,792 L211,792.006103 C215.49995,792.061375 219,792.485272 219,793 L219,793 Z M29.7003461,96 C28.2089861,96 27,97.2049408 27,98.7036329 L27,692.296367 C27,693.789542 28.2035822,695 29.7003461,695 L361.299654,695 C362.791014,695 364,693.795059 364,692.296367 L364,98.7036329 C364,97.2104577 362.796418,96 361.299654,96 L29.7003461,96 Z" id="path-9"></path>
+        <rect id="path-10" x="165" y="47" width="60" height="6" rx="2.69931921"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-9" sketch:type="MSArtboardGroup" transform="translate(-650.000000, -16.000000)">
+            <g id="device-copy" sketch:type="MSLayerGroup" transform="translate(650.000000, 17.000000)">
+                <g id="Lock-Button" transform="translate(386.000000, 168.000000)">
+                    <mask id="mask-2" sketch:name="Base" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Base" fill="#D9D9D9" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                </g>
+                <g id="Volume-Down" transform="translate(2.500000, 270.500000) scale(-1, 1) translate(-2.500000, -270.500000) translate(0.000000, 241.000000)">
+                    <mask id="mask-4" sketch:name="Base" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Base" fill="#D9D9D9" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
+                </g>
+                <g id="Volume-Up" transform="translate(2.500000, 197.500000) scale(-1, 1) translate(-2.500000, -197.500000) translate(0.000000, 168.000000)">
+                    <mask id="mask-6" sketch:name="Base" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <use id="Base" fill="#D9D9D9" sketch:type="MSShapeGroup" xlink:href="#path-5"></use>
+                </g>
+                <g id="Silent-Switch" transform="translate(2.000000, 116.500000) scale(-1, 1) translate(-2.000000, -116.500000) translate(0.000000, 101.000000)">
+                    <mask id="mask-8" sketch:name="Base" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <use id="Base" fill="#D9D9D9" sketch:type="MSShapeGroup" xlink:href="#path-7"></use>
+                </g>
+                <g id="Back">
+                    <use stroke="#D9D9D9" stroke-width="1" fill="#FFFFFF" sketch:type="MSShapeGroup" xlink:href="#path-9"></use>
+                    <use stroke="none" fill-opacity="0.0199999996" fill="none" xlink:href="#path-9"></use>
+                </g>
+                <rect id="Glass" stroke="#D9D9D9" sketch:type="MSShapeGroup" x="12" y="10" width="367" height="775" rx="50"></rect>
+                <ellipse id="Oval-49" stroke="#D9D9D9" sketch:type="MSShapeGroup" cx="196" cy="741" rx="30" ry="30"></ellipse>
+                <g id="Speaker">
+                    <use fill="#D9D9D9" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-10"></use>
+                    <use fill="none" xlink:href="#path-10"></use>
+                </g>
+                <ellipse id="Lens" fill="#D9D9D9" sketch:type="MSShapeGroup" cx="133.5" cy="49.5" rx="3.5" ry="3.5"></ellipse>
+                <rect id="Screen" stroke="#D9D9D9" stroke-linejoin="round" sketch:type="MSShapeGroup" x="27" y="96" width="337" height="599" rx="2.69931921"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

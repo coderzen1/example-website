@@ -1,0 +1,15 @@
+section.content
+  / TODO: change when real values available
+  - if @restaurant.blank?
+    = render "placeholder"
+  - else
+    = render "main_content"
+
+= render 'restaurant_owners/shared/photo_modal'
+
+/ #notification
+/ #photos
+/   = render @photos
+/
+/ - if @photos.next_page
+/   = link_to "More photos", restaurants_photos_path(page: 2), remote: true, class: :"btn btn-info", id: "more-photos"

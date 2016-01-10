@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {
+  html, body {
+    height: 100%;
+  }
+  .wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -245px;
+  }
+  .wrap:after {
+    content: "";
+    display: block;
+  }
+  .footer--sticky, .wrap:after {
+    height: 245px;
+  }
+}

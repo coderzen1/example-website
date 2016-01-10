@@ -1,0 +1,172 @@
+@import 'susy';
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+$footer-border-color: $primary-border-color;
+$footer-logo-color: $primary-color;
+$footer-link-color: $primary-color;
+$footer-link-hover-color: darken($footer-link-color, 10%);
+
+.footer {
+  padding: 0 20px;
+
+  border-top: 1px solid $footer-border-color;
+
+  background-color: $ternary-background-color;
+
+  &--transparent {
+    border-top: 0;
+
+    background-color: $transparent;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__container {
+    @include container(950px);
+    padding: {
+      top: 10px;
+      bottom: 40px;
+    }
+
+    @include tablet {
+      padding: {
+        top: 65px;
+        bottom: 90px;
+      }
+    }
+
+    &--narrow {
+      @include tablet {
+        @include container(615px);
+      }
+    }
+  }
+
+  &__mobile-column {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__left-column {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 0;
+      padding-left: 15px;
+    }
+
+    &--block-mobile {
+      @include only-mobile {
+        display: block;
+
+        margin: {
+          top: 10px;
+          bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &__right-column {
+    display: none;
+    float: right;
+
+    margin-left: auto;
+
+    text-align: right;
+
+    @include tablet {
+      display: block;
+    }
+
+    &--visible {
+      display: block;
+    }
+
+    &--left-mobile {
+      @include only-mobile {
+        float: left;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 48px;
+
+    float: left;
+
+    width: 192px;
+    height: 25px;
+
+    margin-right: 35px;
+
+    color: $footer-logo-color;
+
+    @include tablet {
+      font-size: 63px;
+    }
+
+    &--smaller {
+      @include only-mobile {
+        width: 153px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 15px;
+
+    margin-top: 15px;
+
+    color: $ternary-text-color;
+
+    @include tablet {
+      font-size: $medium-font-size;
+      line-height: 20px;
+
+      margin-top: 10px;
+    }
+
+    &--higher {
+      margin-top: 10px;
+
+      @include tablet {
+        margin-top: 5px;
+      }
+    }
+
+    &--lowered {
+      @include tablet {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.15s ease-in;
+
+    color: $footer-link-color;
+
+    &:hover {
+      color: $footer-link-hover-color;
+    }
+
+    &--push-right {
+      float: right;
+    }
+
+    &--spaced {
+      margin-left: 30px;
+    }
+  }
+}

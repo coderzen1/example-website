@@ -1,0 +1,13 @@
+section.info
+  .info__left-column
+    h3.info__title.title Location
+    = link_to "Edit", edit_restaurants_location_path(@restaurant), remote: true, class: "info__edit standard-link js-toggle-modal"
+
+  .info__right-column
+    h4.info__subtitle Address
+    p.description= @restaurant.address.address
+
+    h4.info__subtitle Coordinates
+    p.description= @restaurant.formatted_coordinates
+
+.map.content__map.js-map data-latitude= @restaurant.lat data-longitude= @restaurant.lng

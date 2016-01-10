@@ -1,0 +1,5 @@
+.container
+  = render 'layouts/admin/users_administrate_links'
+  = render 'search_form', status: params[:status]
+  = render partial: "user", collection: @users
+  = will_paginate @users

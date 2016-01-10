@@ -1,0 +1,30 @@
+section.inputs.inputs--higher
+  .divider
+    - if modal
+      = link_to "Remove", "#", class: "inputs__remove standard-link"
+    h3.inputs__title.title.title--small Restaurant specialty
+
+  .inputs__wrapper.inputs__wrapper--higher
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Name", input_name: :name, type: :string
+
+    .inputs__row
+      .inputs__left-column
+        .inputs__subtitle Price
+      .inputs__right-column
+        .inputs__arrow-wrapper
+          = f.input :currency, wrapper_html: { class: "input-wrapper--inline" }, input_html: { class: "input--condensed" }, label: false, as: :select, prompt: "USD ($)"
+          .dropdown-icon.i-dropdown-arrow
+        = f.input :amount, wrapper_html: { class: "input-wrapper--inline input-wrapper--push-right" }, input_html: { class: "input--condensed" }, label: false
+
+    .inputs__row class="#{ modal ? '' : 'inputs__row--condensed'}"
+      .inputs__left-column
+        .inputs__subtitle Description
+      .inputs__right-column
+        = f.input :description, label: false
+
+    - unless modal
+      .inputs__disclaimer-wrapper
+        p.disclaimer.disclaimer--higher.is-visible-tablet You can add more specialties later.
+        p.disclaimer.disclaimer--higher.is-visible-only-mobile Add more specialties later.
+
+      = f.submit 'Finish', class: 'standard-button standard-button--fullwidth-mobile inputs__round-button inputs__round-button--higher'

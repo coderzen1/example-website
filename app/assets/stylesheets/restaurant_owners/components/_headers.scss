@@ -1,0 +1,142 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+$header-background-color: $light-color;
+$header-border-color: $primary-border-color;
+
+$modal-header-icon-color: $primary-color;
+$modal-header-dark-icon-color: $primary-text-color;
+$modal-header-border: $primary-border-color;
+$modal-header-title-color: $primary-text-color;
+$modal-header-background-color: $light-color;
+
+$modal-header-step-border-color: $primary-color;
+
+.header {
+  background-color: $header-background-color;
+
+  &--bordered {
+    border-bottom: 1px solid $header-border-color;
+  }
+}
+
+.modal-header {
+  clear: both;
+
+  height: 60px;
+
+  border-bottom: 1px solid $modal-header-border;
+  background-color: $modal-header-background-color;
+
+  @include tablet {
+    line-height: 86px;
+
+    height: $header-height;
+
+    padding: 0 10px 0 15px;
+  }
+
+  &--borderless {
+    @include only-mobile {
+      border-bottom: 0;
+    }
+  }
+
+  &--steps {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      height: 2px;
+
+      content: '';
+
+      background-color: $modal-header-step-border-color;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    &--step-#{$i} {
+      &:after {
+        width: #{($i/6)*100%};
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    line-height: 60px;
+
+    display: inline-block;
+
+    width: 45px;
+    height: 100%;
+
+    text-align: center;
+  }
+
+  &__icon {
+    font-size: 16px;
+
+    color: $modal-header-icon-color;
+
+    &:before {
+      font-family: 'foodfaves-icons';
+    }
+
+    &--arrow-and-x {
+      &:before {
+        content: '\f111';
+
+        @include tablet {
+          content: '\f10d';
+        }
+      }
+    }
+
+    &--dark {
+      color: $modal-header-dark-icon-color;
+    }
+  }
+
+  &__title {
+    font-size: $medium-font-size;
+
+    display: inline-block;
+
+    margin: 0;
+
+    vertical-align: middle;
+
+    color: $modal-header-title-color;
+  }
+
+  &__link {
+    line-height: 63px;
+
+    float: right;
+
+    margin-right: 20px;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+
+    border: 0;
+    background-color: $transparent;
+
+    @include tablet {
+      line-height: $header-height;
+    }
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

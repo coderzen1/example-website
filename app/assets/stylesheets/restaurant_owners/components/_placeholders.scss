@@ -1,0 +1,33 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$placeholder-section-text-color: #D3D3D3;
+
+.placeholder {
+  padding: 35px 20px 15px 20px;
+
+  text-align: center;
+
+  color: $placeholder-section-text-color;
+
+  @include tablet {
+    @include container(720px);
+
+    padding: 20px 0;
+  }
+
+  @include large {
+    padding: 100px 0;
+  }
+
+  &__text {
+    @include tablet {
+      line-height: 28px;
+    }
+  }
+
+  &__description-wrapper {
+    margin: 15px 0 20px;
+  }
+}

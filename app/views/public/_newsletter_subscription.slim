@@ -1,0 +1,8 @@
+.newsletter-subscription
+  .tutorial-title.tutorial-title--after
+    h2.__main-title.__main-title--grey = phrase("subscription-title", scope: "newsletter")
+    = form_for @newsletter_subscription, id: "email-form", remote: true do |f|
+      .__button-wrapper.__button-wrapper--input
+        = f.text_field :email, id: "email-subscription", class: "input", placeholder: "Enter your email address"
+        = submit_tag "SUBSCRIBE", class: "button submit-button"
+    p.subscription-message

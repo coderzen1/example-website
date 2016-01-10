@@ -1,0 +1,10 @@
+.row
+  hr
+  .col-md-3
+    = super_user.email
+  .col-md-3
+    = super_user.role
+  .col-md-3
+    = link_to "Edit", edit_admin_super_user_path(id: super_user), class: "btn btn-info"
+  .col-md-3
+    = link_to "Delete", admin_super_user_path(id: super_user), method: :delete, remote: true, class: "btn btn-danger", id: "delete-user-#{super_user.id}"

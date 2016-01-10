@@ -1,0 +1,280 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+@import 'restaurant_owners/components/typography';
+@import 'susy';
+
+$info-section-border-color: $primary-border-color;
+$info-section-subtitle-color: $secondary-text-color;
+
+$tag-section-border-color: $primary-border-color;
+
+.content {
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding: 30px 0 10px 0;
+  }
+
+  &--sticky {
+    padding-bottom: 0;
+  }
+
+  &--lowered-tablet {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+
+    @include tablet {
+      padding: {
+        top: 90px;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__map {
+    margin-top: 15px;
+  }
+
+  &__disclaimer-wrapper {
+    padding: {
+      right: 20px;
+      left: 20px;
+    }
+
+    @include tablet {
+      @include container(615px);
+    }
+  }
+}
+
+.info {
+  margin-left: 20px;
+  padding: 15px 20px 20px 0;
+
+  @include tablet {
+    @include container(950px);
+
+    padding: 35px 40px 0 0;
+  }
+
+  &--bordered {
+    border-bottom: 1px solid $info-section-border-color;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &--condensed-mobile {
+    @include only-mobile {
+      padding: 0;
+
+      border-bottom: 1px solid $info-section-border-color;
+    }
+  }
+
+  &__left-column {
+    @include tablet {
+      @include span(3 of 10 after);
+
+      padding: {
+        right: 55px;
+        left: 15px;
+      }
+    }
+  }
+
+  &__right-column {
+    @include tablet {
+      @include span(7 of 10 after last);
+
+      padding-bottom: 50px;
+    }
+
+    &--bordered {
+      display: none;
+
+      @include tablet {
+        display: block;
+
+        border-bottom: 1px solid $primary-border-color;
+      }
+    }
+  }
+
+  &__description-wrapper {
+    @include span(5 of 7 after);
+    display: inline-block;
+  }
+
+  &__price-wrapper {
+    @include span(2 of 7 after last);
+    display: inline-block;
+  }
+
+  &__title {
+    display: inline-block;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    @include tablet {
+      display: block;
+
+      margin-bottom: 8px;
+    }
+  }
+
+  &__edit {
+    float: right;
+
+    @include tablet {
+      float: none;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 17px;
+    margin-bottom: 0;
+
+    color: $info-section-subtitle-color;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__button-wrapper {
+    margin: {
+      top: 10px;
+      bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.gallery-section {
+  padding-bottom: 5px;
+
+  @include tablet {
+    padding: 35px 0 45px 0;
+  }
+
+  &__header {
+    margin: {
+      right: auto;
+      left: auto;
+    }
+    padding: {
+      right: 20px;
+      left: 20px;
+    }
+
+    @include tablet {
+      @include container(950px);
+    }
+
+    @include desktop {
+      padding: {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    &--mobile {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__report {
+    display: inline-block;
+
+    float: right;
+
+    margin: 16px 0;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__gallery {
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin: {
+        top: 25px;
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.tag-section {
+  margin-left: 20px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid $tag-section-border-color;
+
+  @include tablet {
+    @include container(950px);
+
+    padding: 20px 20px 40px 20px;
+
+    border: 0;
+  }
+
+  @include desktop {
+    padding: {
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__tag-wrapper {
+    margin-top: 17px;
+
+    @include tablet {
+      margin-top: 25px;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+
+    margin-top: 5px;
+  }
+}
+
+.disclaimers {
+  padding: 15px 20px 0 20px;
+
+  &__link {
+    float: right;
+
+    margin-top: 3px;
+  }
+}

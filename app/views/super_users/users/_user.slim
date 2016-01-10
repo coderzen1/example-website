@@ -1,0 +1,23 @@
+.row
+  .col-md-3
+    h5 Name
+    = user.name
+    - if user.flagged?
+      span class="glyphicon glyphicon-flag"
+  .col-md-3
+    h5 Location
+    = user.location
+
+  .col-md-3
+    h5 Contact
+    = user.email
+
+  .col-md-3
+  - if user.deleted?
+    = link_to "Restore user", restore_admin_user_path(id: user), method: :get, remote: true, class: "btn btn-default", id: "restore-button-#{user.id}"
+  - elsif user.locked?
+    = link_to "Unlock user", unlock_admin_user_path(id: user), method: :get, remote: true, class: "btn btn-default", id: "unlock-button-#{user.id}"
+
+  - else
+    = link_to "Lock out", lock_admin_user_path(id: user), method: :get, remote: true, class: "btn btn-success", id: "lock-button-#{user.id}"
+    = link_to "Delete user", admin_user_path(id: user), method: :delete, remote: true, class: "btn btn-default", id: "delete-button-#{user.id}"

@@ -1,0 +1,196 @@
+#nav-content {
+  overflow: auto;
+}
+
+.crave-or-not-section {
+  height: 1200px;
+
+  @media #{$phones-max} {
+    height: 720px;
+    padding-top: 0px;
+  }
+
+  .__button-choice {
+    position: absolute;
+    top: 40%;
+    height: 60px;
+    width: 60px;
+    background: {
+      repeat: no-repeat;
+      position: center;
+      size: 50px;
+    }
+  }
+
+  .__no-button {
+    right: 0;
+    background-image: asset-url('crave_or_not/not_crave_button.svg');
+    z-index: 50;
+  }
+
+  .__yes-button {
+    left: 0;
+    background-image: asset-url('crave_or_not/crave_button.svg');
+  }
+
+  .phone {
+    .__phone-content-wrapper {
+      width: 400%;
+      margin-left: -150%;
+      height: 594px;
+      margin-top: 117px;
+
+      @media #{$phones-max} {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 76px;
+        height: 340px;
+      }
+
+      @media #{$phones-min} and #{$tablets-max} {
+        margin-top: 164px;
+      }
+    }
+
+    .__outer-content {
+      width: 335px;
+
+      @media #{$phones-max} {
+        width: 192px;
+      }
+
+      @media #{$phones-min} and #{$tablets-max} {
+        width: 285px;
+      }
+    }
+
+    .__inner-content {
+      @media #{$phones-max} {
+        padding-top: 45px;
+      }
+    }
+  }
+
+  .__phone-outline {
+    z-index: 50;
+  }
+
+  .green-button {
+    background-image: asset-url('crave_or_not/crave_hover_button.svg');
+  }
+
+  .red-button {
+    background-image: asset-url('crave_or_not/not_crave_hover_button.svg');
+  }
+}
+
+.touch-circle {
+    position: absolute;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(164, 164, 164, 0.5);
+}
+
+.touch-circle--left {
+  top: 325px;
+  right: 10px;
+  animation: slideRight 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -webkit-animation: slideRight 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -moz-animation: slideRight 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -o-animation: slideRight 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+}
+
+.touch-circle--right {
+  top: 325px;
+  left: 10px;
+  animation: slideLeft 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -webkit-animation: slideLeft 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -moz-animation: slideLeft 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+  -o-animation: slideLeft 0.5s 1, opacity 0.5s 1, expandBorder 0.5s 1;
+}
+
+@keyframes slideRight {
+  0% { top: 325px; right: 10px; }
+  100% { top: 317px; right: 0; }
+}
+
+@-webkit-keyframes slideRight {
+  0% { top: 325px; right: 10px; }
+  100% { top: 317px; right: 0; }
+}
+
+@-moz-keyframes slideRight {
+  0% { top: 325px; right: 10px; }
+  100% { top: 317px; right: 0; }
+}
+
+@-o-keyframes slideRight {
+  0% { top: 325px; right: 10px; }
+  100% { top: 317px; right: 0; }
+}
+
+@keyframes slideLeft {
+  // 0% { top: 200px; left: 155px; }
+  0% { top: 325px; left: 10px; }
+  100% { top: 317px; left: 0; }
+}
+
+@-webkit-keyframes slideLeft {
+  // 0% { top: 200px; left: 155px; }
+  0% { top: 325px; left: 10px; }
+  100% { top: 317px; left: 0; }
+}
+
+@-moz-keyframes slideLeft {
+  // 0% { top: 200px; left: 155px; }
+  0% { top: 325px; left: 10px; }
+  100% { top: 317px; left: 0; }
+}
+
+@-o-keyframes slideLeft {
+  // 0% { top: 200px; left: 155px; }
+  0% { top: 325px; left: 10px; }
+  100% { top: 317px; left: 0; }
+}
+
+@keyframes opacity {
+  from { opacity: 1; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes opacity {
+  from { opacity: 1; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes opacity {
+  from { opacity: 1; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes opacity {
+  from { opacity: 1; }
+  to   { opacity: 1; }
+}
+
+@keyframes expandBorder {
+  0% { width: 40px; height: 40px; border-radius: 20px; border: 0; }
+  100% { width: 60px; height: 60px; border-radius: 30px; border: 15px solid rgb(234, 234, 234); }
+}
+
+@-webkit-keyframes expandBorder {
+  0% { width: 40px; height: 40px; border-radius: 20px; border: 0; }
+  100% { width: 60px; height: 60px; border-radius: 30px; border: 15px solid rgb(234, 234, 234); }
+}
+
+@-moz-keyframes expandBorder {
+  0% { width: 40px; height: 40px; border-radius: 20px; border: 0; }
+  100% { width: 60px; height: 60px; border-radius: 30px; border: 15px solid rgb(234, 234, 234); }
+}
+
+@-o-keyframes expandBorder {
+  0% { width: 40px; height: 40px; border-radius: 20px; border: 0; }
+  100% { width: 60px; height: 60px; border-radius: 30px; border: 15px solid rgb(234, 234, 234); }
+}

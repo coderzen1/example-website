@@ -1,0 +1,24 @@
+section.content.content--lowered-tablet
+  .static-modal
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form'}) do |f|
+      .static-modal__header.modal-header.modal-header--borderless.modal-header--steps.modal-header--step-1
+        .modal-header__icon-wrapper
+          i.modal-header__icon.modal-header__icon--dark.i-spoon-knife-icon
+        h3.modal-header__title.modal-header__title Restaurant owners registration
+        = link_to "Log in", new_restaurant_owner_session_path, class: "modal-header__link modal-header__link--uppercase standard-link is-visible-tablet"
+
+      .static-modal__content
+        / = devise_error_messages!
+        section.inputs
+          .divider
+            h3.inputs__title.inputs__title--lowered.title.title--small Account
+          .inputs__wrapper.inputs__wrapper--condensed
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "E-mail address", input_name: :email, type: :email
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "Password", input_name: :password, type: :password
+            = render "restaurant_owners/shared/standard_input", f: f, input_title: "Confirm password", input_name: :password_confirmation, type: :password
+
+            = f.submit 'Next', class: 'standard-button standard-button--fullwidth-mobile inputs__round-button inputs__round-button--higher'
+
+  section.disclaimers.is-visible-only-mobile
+    .disclaimer.disclaimer--heavy Already have an account?
+    = link_to "Log in", new_restaurant_owner_session_path, class: "standard-link disclaimers__link"

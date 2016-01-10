@@ -1,0 +1,9 @@
+section.placeholder
+  .placeholder__logo-wrapper
+    i.i-basic-info.big-logo
+  .placeholder__description-wrapper
+    p.description.description--bold
+     | Welcome to Foodfaves restaurant administration! You haven’t added any information&nbsp;
+     | about your restaurant yet. Make sure your customers can reasily reach you.
+
+  = link_to "Add basic info", new_restaurants_basic_info_path, remote: true, class: "placeholder__link standard-button standard-button--with-icon i-plus"

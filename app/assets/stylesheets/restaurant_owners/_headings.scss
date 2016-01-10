@@ -1,0 +1,46 @@
+@import 'restaurant_owners/variables';
+@import 'restaurant_owners/mixins';
+
+h1 {
+  font-size: $big-font-size;
+  font-weight: 500;
+  line-height: 38px;
+
+  @include tablet {
+    font-size: $large-font-size;
+    line-height: 60px;
+  }
+}
+
+h2 {
+  font-size: $tiny-font-size;
+  font-weight: 700;
+  line-height: 16px;
+
+  @include tablet {
+    font-size: $medium-font-size;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+h3 {
+  font-size: $smaller-font-size;
+  font-weight: 500;
+  line-height: 18px;
+
+  @include tablet {
+    line-height: 28px;
+  }
+}
+
+h4 {
+  font-size: $smaller-font-size;
+  font-weight: 300;
+  line-height: 25px;
+
+  @include tablet {
+    font-size: $medium-font-size;
+    line-height: 30px;
+  }
+}

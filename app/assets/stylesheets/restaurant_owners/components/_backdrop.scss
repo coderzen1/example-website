@@ -1,0 +1,10 @@
+@import 'restaurant_owners/variables';
+
+$backdrop-background-color: $ternary-background-color;
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+
+  background-color: $backdrop-background-color;
+}

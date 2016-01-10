@@ -1,0 +1,20 @@
+.gallery.gallery-section__gallery
+  - 6.times do |i|
+    .gallery__column
+      .gallery__image-wrapper
+        .gallery__modal-opener.js-photo-modal
+        = image_tag "http://placehold.it/294x294", class: "gallery__image"
+        .gallery__image-overlay.image-overlay
+          = link_to "#", class: "image-overlay__report-button report-button" do
+            i.i-flag
+            span Report
+          .image-overlay__info.image-panel
+            .image-panel__name Jennifer Stage
+            .image-panel__social.image-panel__social--time
+              i.i-clock
+              span 3h
+            .image-panel__social.image-panel__social--likes
+              i.i-heart
+              span 120
+.gallery__more
+  = link_to "Load more photos", "#", class: "standard-link standard-link--centered"

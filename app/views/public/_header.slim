@@ -1,0 +1,19 @@
+nav.nav
+  .nav-header
+    .container
+      .row
+        .col-xs-12.col-sm-3
+          = link_to root_path
+            .__logo-name
+              .__icon = inline_svg('icons/foodfaves_logo_trademark.svg')
+        .col-sm-9
+          .__nav-links
+            = link_to t("about_nav"), about_path, class: "nav-link nav-link--about __nav-text"
+            .nav-link.__button-wrapper
+              .button.__button--highlight
+                p.__button-text = t("coming_soon_caps")
+                span.__button-icon
+            .nav-link.nav-link--right
+              .button.__button--grey.__button--right
+                span.__nav-link-icon = inline_svg('icons/ic_local_restaurant.svg')
+                p.__button-text.__nav-button-text = link_to t("restaurant_owners"), new_restaurant_owner_session_path

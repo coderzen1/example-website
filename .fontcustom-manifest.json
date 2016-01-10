@@ -1,0 +1,138 @@
+{
+  "checksum": {
+    "previous": "18488ab1a49214b7c9695e7ed56a7db613cd0451d642d2a972c7ed1da46e8d21",
+    "current": "18488ab1a49214b7c9695e7ed56a7db613cd0451d642d2a972c7ed1da46e8d21"
+  },
+  "fonts": [
+    "app/assets/fonts/foodfaves/foodfaves-icons.ttf",
+    "app/assets/fonts/foodfaves/foodfaves-icons.svg",
+    "app/assets/fonts/foodfaves/foodfaves-icons.woff",
+    "app/assets/fonts/foodfaves/foodfaves-icons.eot"
+  ],
+  "glyphs": {
+    "apple-icon": {
+      "codepoint": 61716,
+      "source": "app/assets/icons/apple-icon.svg"
+    },
+    "arrow-left": {
+      "codepoint": 61713,
+      "source": "app/assets/icons/arrow-left.svg"
+    },
+    "basic-info": {
+      "codepoint": 61700,
+      "source": "app/assets/icons/basic-info.svg"
+    },
+    "camera": {
+      "codepoint": 61698,
+      "source": "app/assets/icons/camera.svg"
+    },
+    "checkbox": {
+      "codepoint": 61717,
+      "source": "app/assets/icons/checkbox.svg"
+    },
+    "checkbox-active": {
+      "codepoint": 61718,
+      "source": "app/assets/icons/checkbox-active.svg"
+    },
+    "clock": {
+      "codepoint": 61707,
+      "source": "app/assets/icons/clock.svg"
+    },
+    "close": {
+      "codepoint": 61709,
+      "source": "app/assets/icons/close.svg"
+    },
+    "dropdown-arrow": {
+      "codepoint": 61714,
+      "source": "app/assets/icons/dropdown-arrow.svg"
+    },
+    "flag": {
+      "codepoint": 61706,
+      "source": "app/assets/icons/flag.svg"
+    },
+    "footer-logo": {
+      "codepoint": 61705,
+      "source": "app/assets/icons/footer-logo.svg"
+    },
+    "generic-avatar": {
+      "codepoint": 61699,
+      "source": "app/assets/icons/generic-avatar.svg"
+    },
+    "heart": {
+      "codepoint": 61708,
+      "source": "app/assets/icons/heart.svg"
+    },
+    "location": {
+      "codepoint": 61701,
+      "source": "app/assets/icons/location.svg"
+    },
+    "menu": {
+      "codepoint": 61702,
+      "source": "app/assets/icons/menu.svg"
+    },
+    "pencil": {
+      "codepoint": 61715,
+      "source": "app/assets/icons/pencil.svg"
+    },
+    "photos": {
+      "codepoint": 61703,
+      "source": "app/assets/icons/photos.svg"
+    },
+    "plus": {
+      "codepoint": 61712,
+      "source": "app/assets/icons/plus.svg"
+    },
+    "sandwich-icon": {
+      "codepoint": 61696,
+      "source": "app/assets/icons/sandwich-icon.svg"
+    },
+    "spoon-knife-icon": {
+      "codepoint": 61697,
+      "source": "app/assets/icons/spoon-knife-icon.svg"
+    },
+    "star": {
+      "codepoint": 61711,
+      "source": "app/assets/icons/star.svg"
+    },
+    "tags": {
+      "codepoint": 61704,
+      "source": "app/assets/icons/tags.svg"
+    },
+    "trash": {
+      "codepoint": 61719,
+      "source": "app/assets/icons/trash.svg"
+    }
+  },
+  "options": {
+    "autowidth": true,
+    "config": "config/fontcustom.yml",
+    "css_selector": ".i-{{glyph}}",
+    "debug": true,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "foodfaves-icons",
+    "force": false,
+    "input": {
+      "templates": "app/assets/icons/",
+      "vectors": "app/assets/icons/"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "app/assets/stylesheets/restaurant_owners/overcommit_excluded/",
+      "fonts": "app/assets/fonts/foodfaves",
+      "preview": "app/assets/fonts/foodfaves"
+    },
+    "preprocessor_path": "foodfaves/",
+    "quiet": false,
+    "templates": [
+      "scss-rails",
+      "preview"
+    ]
+  },
+  "templates": [
+    "app/assets/stylesheets/restaurant_owners/overcommit_excluded/_foodfaves-icons-rails.scss",
+    "app/assets/fonts/foodfaves/foodfaves-icons-preview.html"
+  ]
+}

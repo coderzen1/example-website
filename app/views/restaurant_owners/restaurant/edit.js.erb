@@ -1,0 +1,7 @@
+$('#modal-basic-info').html('<%=j render "shared/modal" %>');
+
+$('.modal-title').append('Add basic info');
+$('.modal-body').append('<%=j render "edit" %>')
+$('.modal-body').append('<%=j render "form" %>')
+
+$('#modal').modal('show');

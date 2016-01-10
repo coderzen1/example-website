@@ -1,0 +1,8 @@
+$('#side-modal').html("<%= j render 'restaurant_owners/side_content/menu_add_specialty_form' %>");
+
+var $titleInput = $('.js-title-input');
+var $titleEditIcon = $('js-title-edit-icon');
+
+titleInputsHandler($titleInput, $titleEditIcon);
+
+sideContentToggler();

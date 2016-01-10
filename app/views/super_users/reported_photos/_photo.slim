@@ -1,0 +1,17 @@
+.row
+  .col-md-3
+    = image_tag(photo.image, size: "200*200")
+  .col-md-9
+   .row
+     .col-md-6
+        h5 Reported by:
+        ul
+          = render partial: "report", collection: photo.photo_reports
+     .col-md-6
+       = link_to "APPROVE", approve_admin_reported_photo_path(id: photo.id), method: :post, remote: true, class: "btn btn-success", id: "approve-button-#{photo.id}"
+       = link_to "REMOVE", remove_admin_reported_photo_path(id: photo.id), method: :post, remote: true, class: "btn btn-default", id: "remove-button-#{photo.id}"
+   .row
+    .col-md-12
+       h5 Tags:
+       = render partial: "tag", collection: photo.tags, locals: { photo: photo }
+  hr

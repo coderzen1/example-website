@@ -1,0 +1,9 @@
+section.content.content--sticky.js-main-wrapper
+  - if @restaurant.location_present?
+    = render "main_content"
+  - else
+    = render "placeholder"
+
+/ #location-info
+/   = render "location"
+/ #modal-location

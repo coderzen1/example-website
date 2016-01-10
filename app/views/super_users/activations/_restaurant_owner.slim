@@ -1,0 +1,14 @@
+.row
+  .col-md-3
+    = image_tag(restaurant_owner.restaurant.ownership_document, size: "50*50")
+  .col-md-3
+    h5 Restaurant name
+    = restaurant_owner.restaurant.name
+    h5 Restaurant owner name
+    = restaurant_owner.name
+    p
+      = mail_to restaurant_owner.email, "Contact Restaurant Owner"
+  .col-md-6
+    = link_to "APPROVE", approve_admin_activation_path(id: restaurant_owner.id), method: :post, remote: true, class: "btn btn-success", id: "approve-owner-#{restaurant_owner.id}"
+    = link_to "REJECT", reject_admin_activation_path(id: restaurant_owner.id), method: :post, remote: true, class: "btn btn-default", id: "reject-owner-#{restaurant_owner.id}"
+    = link_to "DELETE OWNER", delete_owner_admin_activation_path(id: restaurant_owner.id), method: :post, remote: true, class: "btn btn-default", id: "delete-owner-#{restaurant_owner.id}"

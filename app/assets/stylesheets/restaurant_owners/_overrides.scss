@@ -1,0 +1,37 @@
+@import 'restaurant_owners/variables';
+@import 'susy';
+
+$alert-border-color: $primary-border-color;
+$alert-background-color: #FFF9F2;
+$alert-text-color: $primary-color;
+$alert-text-hover-color: darken($alert-text-color, 15%);
+
+.alert {
+  color: $alert-text-color;
+  border-bottom: 1px solid $alert-border-color;
+  background-color: $alert-background-color;
+
+  &__wrapper {
+    @include container(1140px);
+    padding: 0 20px;
+  }
+
+  &__close {
+    line-height: 60px;
+
+    float: right;
+
+    padding: 0 20px;
+
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+
+    &:hover {
+      color: $alert-text-hover-color;
+    }
+  }
+
+  &__message {
+    padding: 20px 0;
+  }
+}

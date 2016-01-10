@@ -1,0 +1,84 @@
+@import 'restaurant_owners/mixins';
+@import 'susy';
+
+$layout-gallery: (
+  gutter-position: after,
+  gutters: 0.1,
+  columns: 3
+);
+
+$layout-no-gutter: (
+  gutters: 0
+);
+
+@include with-layout($layout-gallery) {
+  .gallery {
+    @include container(950px);
+
+    &__column {
+      margin-bottom: 0;
+
+      @include with-layout($layout-no-gutter) {
+        @include gallery(1);
+      }
+
+      @include tablet {
+        @include gallery(1);
+        margin-bottom: gutter();
+      }
+
+      &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__image-wrapper {
+      position: relative;
+
+      @include tablet {
+        &:hover {
+          .gallery__image-overlay {
+            pointer-events: auto;
+
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__modal-opener {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      cursor: pointer;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &__image {
+      display: block;
+
+      width: 100%;
+
+      vertical-align: middle;
+    }
+
+    &__image-overlay {
+      transition: opacity 0.15s ease-in;
+      pointer-events: none;
+
+      opacity: 0;
+    }
+
+    &__more {
+      clear: both;
+
+      text-align: center;
+    }
+  }
+}

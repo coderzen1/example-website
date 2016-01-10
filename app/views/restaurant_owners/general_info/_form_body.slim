@@ -1,0 +1,20 @@
+section.inputs
+  .divider
+    h3.inputs__title.title.title--small Contact info
+  .inputs__wrapper
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Restaurant name", input_name: :restaurant_name, type: :string
+    = render "restaurant_owners/shared/standard_input", f: f, input_title: "Restaurant owner name", input_name: :owner_name, type: :string
+    .inputs__row
+      .inputs__left-column
+        .inputs__subtitle  Date of birth
+      .inputs__right-column
+        .inputs__arrow-wrapper
+          = f.input :owner_birthday, label: false, wrapper_html: { class: "input-wrapper--inline" }, input_html: { autocomplete: "off", class: "input--datepicker", id: "datepicker" }
+          .dropdown-icon.i-dropdown-arrow
+
+/ = simple_form_for @info, url:  restaurants_general_info_path(id:current_restaurant) , method: :put do |f|
+/   = f.input :restaurant_name
+/   = f.input :owner_name
+/   = f.input :owner_birthday
+/   = f.file_field :ownership_document
+/   = f.submit "Update"

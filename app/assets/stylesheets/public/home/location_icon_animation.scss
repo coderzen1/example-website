@@ -1,0 +1,102 @@
+.explore-places-locations {
+
+  .fall--lft-top-left {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: fallLftTopLeft 0.5s 1;
+    -webkit-animation: fallLftTopLeft 0.5s 1;
+    -moz-animation: fallLftTopLeft 0.5s 1;
+    -o-animation: fallLftTopLeft 0.5s 1;
+  }
+
+  .fall--lft-middle-right {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: fallLftMiddleRight 0.5s 1;
+    -webkit-animation: fallLftMiddleRight 0.5s 1;
+    -moz-animation: fallLftMiddleRight 0.5s 1;
+    -o-animation: fallLftMiddleRight 0.5s 1;
+  }
+
+  .fall--lft-bottom-left {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: fallLftBottomLeft 0.5s 1;
+    -webkit-animation: fallLftBottomLeft 0.5s 1;
+    -moz-animation: fallLftBottomLeft 0.5s 1;
+    -o-animation: fallLftBottomLeft 0.5s 1;
+  }
+
+  .fall--rt-middle-right {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: fallRtMiddleRight 0.5s 1;
+    -webkit-animation: fallRtMiddleRight 0.5s 1;
+    -moz-animation: fallRtMiddleRight 0.5s 1;
+    -o-animation: fallRtMiddleRight 0.5s 1;
+  }
+
+  .fall--rt-bottom-left {
+    position: absolute;
+    background-image: asset-url('icons/food_pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: fallRtBottomLeft 0.5s 1;
+    -webkit-animation: fallRtBottomLeft 0.5s 1;
+    -moz-animation: fallRtBottomLeft 0.5s 1;
+    -o-animation: fallRtBottomLeft 0.5s 1;
+  }
+}
+
+@keyframes fallLftTopLeft {
+  from { top: 0%; bottom: auto; }
+  to { top: 25%; bottom: auto; }
+}
+
+@keyframes fallLftMiddleRight {
+  from { top: 15%; bottom: auto; }
+  to { top: 40%; bottom: auto; }
+}
+
+@keyframes fallLftBottomLeft {
+  from { top: 40%; bottom: auto; }
+  to { top: 65%; bottom: auto; }
+}
+
+@keyframes fallRtMiddleRight {
+  from { top: 35%; bottom: auto; }
+  to { top: 60%; bottom: auto; }
+}
+
+@keyframes fallRtBottomLeft {
+  from { top: 55%; bottom: auto; }
+  to { top: 80%; bottom: auto; }
+}
